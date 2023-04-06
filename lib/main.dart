@@ -79,14 +79,15 @@ class _MyHomePageState extends State<MyHomePage> {
                          backgroundColor: Colors.deepPurple,
                           appBar: AppBar(
                                   centerTitle: true,
-                                  toolbarHeight: 60.2,
+                                  toolbarHeight: 40.2,
+                                  backgroundColor: Colors.orange,
                                   toolbarTextStyle: const TextStyle(
                                         color:  Color.fromARGB( 1, 254, 0, 0)
                                   ),
                                   title:  Text( super.widget.title ),   // o "widget" eh uma propriedade exclusiva da classe State e a propriedade "title" foi adquirida atraves do State<MyHomePage>
                           ),
-                          body: Center(
 
+                          body: Center(
                                 child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: <Widget>[
@@ -101,12 +102,42 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ],
                                 ),
                           ),
-                          floatingActionButton: FloatingActionButton(
-                                  onPressed: this._incrementCounter, // aqui o 'this' eh opcional
-                                  tooltip: 'Increment',
-                                  child: const Icon(Icons.add),
+
+                          persistentFooterButtons: <FloatingActionButton>[
+                                   FloatingActionButton(
+                                          onPressed: this._incrementCounter, // aqui o 'this' eh opcional
+                                          tooltip: 'Increment',
+                                          child: const Icon(Icons.add),
+                                  ),
+                                FloatingActionButton(
+                                          onPressed: () {
+                                               setState ( () =>  this._counter-- ) ;
+                                          },
+                                          backgroundColor: Colors.red,
+                                          child: const Icon(Icons.minimize),
+                                ),
+                          ],
+
+                          /*
+                          *     bottomNavigationBar: BottomNavigationBar(
+                                    items: const <BottomNavigationBarItem>[
+                                           BottomNavigationBarItem (
+                                                  icon: Icon(Icons.minimize),
+                                                  backgroundColor: Colors.red,
+                                                  label: "est",
+                                            ),
+                                            BottomNavigationBarItem (
+                                                  icon: Icon(Icons.minimize),
+                                                  backgroundColor: Colors.red,
+                                                  label: "test2",
+                                            ),
+                                    ]
+
                           ),
                           floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+                          *
+                          * */
+
 
                 );
         }
