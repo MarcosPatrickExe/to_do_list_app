@@ -35,12 +35,12 @@ class MyApp extends StatelessWidget {
           @override
           Widget build ( BuildContext context ) {
             return MaterialApp(
-                    title: 'Flutter Demo',
+                    title: 'Basic app',
                     theme: ThemeData(
                             primarySwatch: null ,//Colors.orange,
                             secondaryHeaderColor:  null, //Colors.black
                     ),
-                    home: const MyHomePage(title: "Meu primeiro app"), // neste exemplo o home eh uma outra classe, mas tbm pode ser configurado sem outra classe, assim como na classe "GiftApp"
+                    home: const MyHomePage(title: "App"), // neste exemplo o home eh uma outra classe, mas tbm pode ser configurado sem outra classe, assim como na classe "GiftApp"
                           // use 'const' para somente construtores declarados com 'const'. Ele eh opcional
             );
           }
@@ -65,6 +65,10 @@ class MyHomePage extends StatefulWidget {  // widget com estado mutavel
   // componente que representa o estado da pagina  "MyHomePage"
 class _MyHomePageState extends State<MyHomePage> {
         int _counter = 0; // variavel pertecente a interface (build()) do State
+        dynamic _itemIndexSelect = 0;
+
+        static final  List<String> titles = ["Incrementador", "Sobre", "Imagem"];
+
 
         void _incrementCounter() {
               setState(() { // passando funcao lambda/callback para o setState
@@ -72,15 +76,17 @@ class _MyHomePageState extends State<MyHomePage> {
               });
         }
 
+
+
         // a funcao "build" abaixo funciona como um renderizador do State
         @override
         Widget build( BuildContext context ) { //chamado toda vez que o estado setState() eh alterado!!
                 return Scaffold(
-                         backgroundColor: Colors.deepPurple,
+                         backgroundColor: const Color.fromARGB(255, 55, 3, 69),
                           appBar: AppBar(
                                   centerTitle: true,
-                                  toolbarHeight: 40.2,
-                                  backgroundColor: Colors.orange,
+                                  toolbarHeight: 50.2,
+                                  backgroundColor: Colors.deepPurple,
                                   toolbarTextStyle: const TextStyle(
                                         color:  Color.fromARGB( 1, 254, 0, 0)
                                   ),
@@ -91,53 +97,64 @@ class _MyHomePageState extends State<MyHomePage> {
                                 child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: <Widget>[
-                                                  const Text(
-                                                        'Voce apertou o botao N vezes: ',
-                                                        style: TextStyle( color: Colors.white),
+                                                  Text(
+                                                          'Nome do titulo da classe StatefullWidget:  ${super.widget.title} ',
+                                                          style: TextStyle( color: Colors.white),
+                                                  ),
+                                                   Text(
+                                                          'Voce apertou o botao N vezes: ',
+                                                          style: TextStyle( color: Colors.white),
                                                   ),
                                                   Text(
                                                           'número atual $_counter',
-                                                          style: Theme.of(context).textTheme.headlineMedium,
+                                                          style: const TextStyle( color: Colors.white, fontSize: 40.1),
+                                                         // style: Theme.of(context).textTheme.headlineMedium,
                                                   ),
                                         ],
                                 ),
                           ),
 
-                          persistentFooterButtons: <FloatingActionButton>[
-                                   FloatingActionButton(
-                                          onPressed: this._incrementCounter, // aqui o 'this' eh opcional
-                                          tooltip: 'Increment',
-                                          child: const Icon(Icons.add),
-                                  ),
-                                FloatingActionButton(
-                                          onPressed: () {
-                                               setState ( () =>  this._counter-- ) ;
-                                          },
-                                          backgroundColor: Colors.red,
-                                          child: const Icon(Icons.minimize),
-                                ),
+                          persistentFooterButtons: <Widget>[
+                                   Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children:   <Widget>[
+                                                FloatingActionButton (
+                                                        onPressed: _incrementCounter, // aqui o 'this' eh opcional
+                                                        tooltip: 'Increment',
+                                                        child:   Icon(Icons.add),
+                                                ),
+                                                FloatingActionButton(
+                                                        onPressed: () {
+                                                              setState ( () {  _counter--; } );
+                                                        },
+                                                        backgroundColor: Colors.red,
+                                                        child:  Icon(Icons.minimize),
+                                                ),
+                                          ],
+                                  )
+
                           ],
 
-                          /*
-                          *     bottomNavigationBar: BottomNavigationBar(
-                                    items: const <BottomNavigationBarItem>[
-                                           BottomNavigationBarItem (
-                                                  icon: Icon(Icons.minimize),
-                                                  backgroundColor: Colors.red,
-                                                  label: "est",
-                                            ),
-                                            BottomNavigationBarItem (
-                                                  icon: Icon(Icons.minimize),
-                                                  backgroundColor: Colors.red,
-                                                  label: "test2",
-                                            ),
-                                    ]
 
-                          ),
-                          floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-                          *
-                          * */
+                          bottomNavigationBar: BottomNavigationBar (
+                                  backgroundColor: Colors.deepPurple,
+                                  unselectedItemColor: Colors.white,
 
+                                  items: const  <BottomNavigationBarItem>[
+                                           BottomNavigationBarItem(
+                                                    label: "Incrementador",
+                                                    icon: Icon( Icons.numbers  ),
+                                           ),
+                                          BottomNavigationBarItem(
+                                                    label: "lorem ipsum",
+                                                    icon: Icon( Icons.text_format  ),
+                                          ),
+                                          BottomNavigationBarItem(
+                                                    label: "image",
+                                                    icon: Icon( Icons.image  ),
+                                          ),
+                                  ],
+                          )
 
                 );
         }
