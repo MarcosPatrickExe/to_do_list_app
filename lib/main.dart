@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         dynamic _itemIndexSelect = 0;
 
         static final  List<String> titles = ["Incrementador", "Sobre", "Imagem"];
-
+        static final List<Widget> pages = [];
 
         void _incrementCounter() {
               setState(() { // passando funcao lambda/callback para o setState
