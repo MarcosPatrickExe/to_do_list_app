@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
         static final List<Widget> pages = [];
 
         void _incrementCounter() {
-              setState(() { // passando funcao lambda/callback para o setState
+              super.setState(() { // passando funcao lambda/callback para o setState
                       this._counter++; // aqui o 'this' nao eh necessario
               });
         }
@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                           'Nome do titulo da classe StatefullWidget:  ${super.widget.title} ',
                                                           style: TextStyle( color: Colors.white),
                                                   ),
-                                                   Text(
+                                                   const Text(
                                                           'Voce apertou o botao N vezes: ',
                                                           style: TextStyle( color: Colors.white),
                                                   ),
@@ -114,26 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                           ),
 
-                          persistentFooterButtons: <Widget>[
-                                   Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                          children:   <Widget>[
-                                                FloatingActionButton (
-                                                        onPressed: _incrementCounter, // aqui o 'this' eh opcional
-                                                        tooltip: 'Increment',
-                                                        child:   Icon(Icons.add),
-                                                ),
-                                                FloatingActionButton(
-                                                        onPressed: () {
-                                                              setState ( () {  _counter--; } );
-                                                        },
-                                                        backgroundColor: Colors.red,
-                                                        child:  Icon(Icons.minimize),
-                                                ),
-                                          ],
-                                  )
-
-                          ],
+                         
 
 
                           bottomNavigationBar: BottomNavigationBar (
