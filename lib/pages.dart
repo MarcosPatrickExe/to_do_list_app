@@ -25,7 +25,7 @@ class LoremIpsum extends StatelessWidget implements Scenes{
                                       height: 300.0,
                                       child: const Text(
                                                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                                                        style: TextStyle( color: Colors.white),
+                                                        style: TextStyle( color: Colors.white, fontSize: 30.0),
                                       ),
                               )
                         ),
@@ -37,7 +37,14 @@ class LoremIpsum extends StatelessWidget implements Scenes{
 
 
 class Options extends StatelessWidget implements Scenes {
-          const Options({super.key});
+          Options({super.key});
+
+          final ButtonStyle allBtnStyles = ElevatedButton.styleFrom(
+                    minimumSize: const Size(100.0, 50.0),
+                    maximumSize: const Size(200.0, 100.0),
+                    backgroundColor: const Color.fromARGB(255, 128, 0, 177),
+                    textStyle: const TextStyle( fontSize: 20.0,  ),
+          );
 
           @override
           Widget build(BuildContext bc){
@@ -52,22 +59,25 @@ class Options extends StatelessWidget implements Scenes {
                            body:  Center(
                                 child: Column(
                                         mainAxisAlignment:  MainAxisAlignment.spaceAround,
-                                        children: <Widget>[
-                                              ElevatedButton(
-                                             //         style: ButtonStyle( backgroundColor:  Color.fromARGB(1, 255, 0, 0), ),
-                                                      onPressed: null,
-                                                      child: Text("Option one...", style: TextStyle( color: Colors.white),  ),
+                                        children:   <Widget>[
+                                               ElevatedButton(
+                                                      style: this.allBtnStyles,
+                                                      onPressed: () { },
+                                                      child: const Text("Option one...", style: TextStyle( color: Colors.white),  ),
                                               ),
                                               ElevatedButton(
-                                                      onPressed: null,
+                                                      style: this.allBtnStyles,
+                                                      onPressed: () {},
                                                       child: Text("Option two...", style: TextStyle( color: Colors.white),  ),
                                               ),
                                               ElevatedButton(
-                                                      onPressed: null,
+                                                      style: this.allBtnStyles,
+                                                      onPressed: () {},
                                                       child: Text("Option three...", style: TextStyle( color: Colors.white),  ),
                                               ),
                                               ElevatedButton(
-                                                      onPressed: null,
+                                                      style: this.allBtnStyles,
+                                                      onPressed: () {},
                                                       child: Text("Option four...", style: TextStyle( color: Colors.white),  ),
                                               ),
                                         ],

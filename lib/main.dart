@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget implements Scenes{  // widget com estado mutavel
           const MyHomePage({ // parametros dentro de chaves sao opcionais, exceto aqueles com "required"
                     super.key, // recebe e ja envia a key para o construtor
-                    required this.title ,  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
+                    required String this.title,  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
           });
          final String title;
 
@@ -88,17 +88,23 @@ class _MyHomePageState extends State<MyHomePage> {
                //   setState(() => _itemIndexSelect = index );
               switch(index){
                     case 1:
-                          Navigator.push(super.context,  MaterialPageRoute(builder: (context) => const LoremIpsum() ));
+                          Navigator.push(
+                                        super.context,
+                                        MaterialPageRoute( builder: (context) => const LoremIpsum() )
+                          );
                           break;
                     case 2:
-                          Navigator.push(super.context, MaterialPageRoute(builder: (context) => const Options() ));
+                          Navigator.push(
+                                        super.context,
+                                        MaterialPageRoute( builder: (context) =>  Options() )
+                          );
                           break;
               }
         }
 
 
         // a funcao "build" abaixo funciona como um renderizador do State
-        @override
+        @override       // "context" eh um elemento que aponta para "MyHomePage" , o qual eh um Widget que esta dentro de uma arvore
         Widget build( BuildContext context ) { //chamado toda vez que o estado setState() eh alterado!!
                 return Scaffold(
                           backgroundColor: const Color.fromARGB(255, 55, 3, 69),
@@ -116,10 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: <Widget>[
-                                                  Text(
-                                                          'Nome do titulo da classe StatefullWidget:  ${super.widget.title} ',
-                                                          style: TextStyle( color: Colors.white),
-                                                  ),
                                                    const Text(
                                                           'Voce apertou o botao N vezes: ',
                                                           style: TextStyle( color: Colors.white),
@@ -129,6 +131,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                                           style: const TextStyle( color: Colors.white, fontSize: 40.1),
                                                          // style: Theme.of(context).textTheme.headlineMedium,
                                                   ),
+                                                Text(
+                                                          'Nome do titulo da classe StatefullWidget:  ${super.widget.title} ',
+                                                          style: const TextStyle( color: Colors.white, fontSize: 10.0),
+                                                ),
                                         ],
                                 ),
                           ),
@@ -139,18 +145,17 @@ class _MyHomePageState extends State<MyHomePage> {
                                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                               children:   <Widget>[
                                                       FloatingActionButton (
-                                                                onPressed: (){
-                                                                          this.incrementCounter();
-                                                                }, // aqui o 'this' eh opcional
+                                                                onPressed:  this.incrementCounter,
+                                                                 // aqui o 'this' eh opcional
                                                                 tooltip: 'Increment',
-                                                                child:   Icon(Icons.add),
+                                                                child:  const Icon(Icons.add),
                                                       ),
                                                       FloatingActionButton(
                                                                 onPressed: () {
                                                                           setState( () {  _counter--; } );
                                                                 },
                                                                 backgroundColor: Colors.red,
-                                                                child:  Icon(Icons.minimize),
+                                                                child:  const Icon(Icons.minimize),
                                                   ),
                                         ],
                                       )
@@ -160,6 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           bottomNavigationBar: BottomNavigationBar (
                                       backgroundColor: Colors.deepPurple,
                                       unselectedItemColor: Colors.white,
+                                      selectedItemColor: const Color.fromARGB(255, 55, 3, 69),
                                       onTap: this._onTapItem,
 
                                       items: const  <BottomNavigationBarItem>[
