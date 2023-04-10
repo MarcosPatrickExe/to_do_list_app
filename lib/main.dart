@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         int _counter = 0; // variavel pertecente a interface (build()) do State
         static dynamic _itemIndexSelect = 0;
 
-        static final List<Scenes> pages = [MyHomePage(title: 'Incrementor',), LoremIpsum(), Options() ];
+      //  static final List<Scenes> pages = [MyHomePage(title: 'Incrementor',), LoremIpsum(), Options() ];
 
         void _incrementCounter() {
                   super.setState(() { // passando funcao lambda/callback para o setState
@@ -86,7 +86,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
         void _onTapItem(int index){
                //   setState(() => _itemIndexSelect = index );
-              print("index: $index");
+              switch(index){
+                    case 1:
+                          Navigator.push(super.context,  MaterialPageRoute(builder: (context) => const LoremIpsum() ));
+                          break;
+                    case 2:
+                          Navigator.push(super.context, MaterialPageRoute(builder: (context) => const Options() ));
+                          break;
+              }
         }
 
 
@@ -94,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
         @override
         Widget build( BuildContext context ) { //chamado toda vez que o estado setState() eh alterado!!
                 return Scaffold(
-                         backgroundColor: const Color.fromARGB(255, 55, 3, 69),
+                          backgroundColor: const Color.fromARGB(255, 55, 3, 69),
                           appBar: AppBar(
                                   centerTitle: true,
                                   toolbarHeight: 50.2,
