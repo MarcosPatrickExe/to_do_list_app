@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list/pages.dart';
+
 
 void main() {
-         runApp(  const  MyApp()  ); // antes: const MyApp()
+         runApp(
+              const  MyApp( )
+         ); // antes: const MyApp()
 }
 
-
+/*
 class GiftApp extends StatelessWidget {
 
         @override
@@ -24,7 +28,7 @@ class GiftApp extends StatelessWidget {
               //  throw UnimplementedError();
         }
 }
-
+*/
 
 
 
@@ -48,12 +52,13 @@ class MyApp extends StatelessWidget {
 
 
  // componente que representa uma pagina com estado dinamico, o qual vai ser gerenciado pela classe "_MyHomePageState"
-class MyHomePage extends StatefulWidget {  // widget com estado mutavel
+class MyHomePage extends StatefulWidget implements Scenes{  // widget com estado mutavel
           const MyHomePage({ // parametros dentro de chaves sao opcionais, exceto aqueles com "required"
                     super.key, // recebe e ja envia a key para o construtor
-                    required this.title // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
-        });
+                    required this.title ,  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
+          });
          final String title;
+
         // toda classe com propriedades final devem ter um construtor const !!
 
         @override
@@ -65,17 +70,24 @@ class MyHomePage extends StatefulWidget {  // widget com estado mutavel
   // componente que representa o estado da pagina  "MyHomePage"
 class _MyHomePageState extends State<MyHomePage> {
         int _counter = 0; // variavel pertecente a interface (build()) do State
-        dynamic _itemIndexSelect = 0;
+        static dynamic _itemIndexSelect = 0;
 
-        static final  List<String> titles = ["Incrementador", "Sobre", "Imagem"];
-        static final List<Widget> pages = [];
+        static final List<Scenes> pages = [MyHomePage(title: 'Incrementor',), LoremIpsum(), Options() ];
 
         void _incrementCounter() {
-              super.setState(() { // passando funcao lambda/callback para o setState
-                      this._counter++; // aqui o 'this' nao eh necessario
-              });
+                  super.setState(() { // passando funcao lambda/callback para o setState
+                          this._counter++; // aqui o 'this' nao eh necessario
+                  });
         }
 
+        void incrementCounter(){
+                  setState(  () =>  this._counter++  );
+        }
+
+        void _onTapItem(int index){
+               //   setState(() => _itemIndexSelect = index );
+              print("index: $index");
+        }
 
 
         // a funcao "build" abaixo funciona como um renderizador do State
@@ -115,28 +127,59 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
 
                          
+                          persistentFooterButtons: <Widget>[
+                                    Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                              children:   <Widget>[
+                                                      FloatingActionButton (
+                                                                onPressed: (){
+                                                                          this.incrementCounter();
+                                                                }, // aqui o 'this' eh opcional
+                                                                tooltip: 'Increment',
+                                                                child:   Icon(Icons.add),
+                                                      ),
+                                                      FloatingActionButton(
+                                                                onPressed: () {
+                                                                          setState( () {  _counter--; } );
+                                                                },
+                                                                backgroundColor: Colors.red,
+                                                                child:  Icon(Icons.minimize),
+                                                  ),
+                                        ],
+                                      )
+                          ],
 
 
                           bottomNavigationBar: BottomNavigationBar (
-                                  backgroundColor: Colors.deepPurple,
-                                  unselectedItemColor: Colors.white,
+                                      backgroundColor: Colors.deepPurple,
+                                      unselectedItemColor: Colors.white,
+                                      onTap: this._onTapItem,
 
-                                  items: const  <BottomNavigationBarItem>[
-                                           BottomNavigationBarItem(
-                                                    label: "Incrementador",
-                                                    icon: Icon( Icons.numbers  ),
-                                           ),
-                                          BottomNavigationBarItem(
-                                                    label: "lorem ipsum",
-                                                    icon: Icon( Icons.text_format  ),
-                                          ),
-                                          BottomNavigationBarItem(
-                                                    label: "image",
-                                                    icon: Icon( Icons.image  ),
-                                          ),
-                                  ],
+                                      items: const  <BottomNavigationBarItem>[
+                                               BottomNavigationBarItem(
+                                                        label: "Incrementor",
+                                                        icon: Icon( Icons.numbers  ),
+                                               ),
+                                              BottomNavigationBarItem(
+                                                        label: "Lorem ipsum",
+                                                        icon: Icon( Icons.text_format  ),
+                                              ),
+                                              BottomNavigationBarItem(
+                                                        label: "Options",
+                                                        icon: Icon( Icons.image  ),
+                                              ),
+                                      ],
                           )
 
                 );
         }
+}
+
+
+
+class Elements {
+        Elements( {this.body, this.footerBottoms } );
+
+        Widget?  body = null;
+        List<Widget>?  footerBottoms = null;
 }
