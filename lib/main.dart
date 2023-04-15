@@ -92,12 +92,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                         super.context,
                                         MaterialPageRoute( builder: (context) => const LoremIpsum() )
                           );
+                          _MyHomePageState._itemIndexSelect = 1;
                           break;
                     case 2:
                           Navigator.push(
                                         super.context,
                                         MaterialPageRoute( builder: (context) =>  Options() )
                           );
+                          _MyHomePageState._itemIndexSelect = 2;
                           break;
               }
         }

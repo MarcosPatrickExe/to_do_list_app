@@ -63,22 +63,22 @@ class Options extends StatelessWidget implements Scenes {
                                                ElevatedButton(
                                                       style: this.allBtnStyles,
                                                       onPressed: () { },
-                                                      child: const Text("Option one...", style: TextStyle( color: Colors.white),  ),
+                                                      child: const Text("Start game", style: TextStyle( color: Colors.white),  ),
                                               ),
                                               ElevatedButton(
                                                       style: this.allBtnStyles,
                                                       onPressed: () {},
-                                                      child: Text("Option two...", style: TextStyle( color: Colors.white),  ),
+                                                      child: Text("Settings", style: TextStyle( color: Colors.white),  ),
                                               ),
                                               ElevatedButton(
                                                       style: this.allBtnStyles,
                                                       onPressed: () {},
-                                                      child: Text("Option three...", style: TextStyle( color: Colors.white),  ),
+                                                      child: Text("Volume", style: TextStyle( color: Colors.white),  ),
                                               ),
                                               ElevatedButton(
                                                       style: this.allBtnStyles,
                                                       onPressed: () {},
-                                                      child: Text("Option four...", style: TextStyle( color: Colors.white),  ),
+                                                      child: Text("About", style: TextStyle( color: Colors.white),  ),
                                               ),
                                         ],
                                 )
