@@ -58,8 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
         }
 
 
-
-
         // a funcao "build" abaixo funciona como um renderizador do State
         @override       // "context" eh um elemento que aponta para "MyHomePage" , o qual eh um Widget que esta dentro de uma arvore
         Widget build( BuildContext context ) { //chamado toda vez que o estado setState() eh alterado!!
@@ -118,8 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       )
                           ],
 
-
-                          bottomNavigationBar: Bottombuttons.btnNbar
+                          bottomNavigationBar: BottomNavBarComp()
 
                 );
         }
@@ -129,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class Elements {
         Elements( {this.body, this.footerBottoms } );
+
 
         Widget?  body = null;
         List<Widget>?  footerBottoms = null;
