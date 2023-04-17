@@ -1,35 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_list/pages.dart';
+import 'codeModels/model.dart' ;
 
 
 void main() {
-         runApp(
-              const  MyApp( )
-         ); // antes: const MyApp()
+         runApp( const  MyApp( )  ); // antes: const MyApp()
 }
-
-/*
-class GiftApp extends StatelessWidget {
-
-        @override
-        Widget build(BuildContext context) { // funcao q constroi seu wiget
-              return MaterialApp(
-                        title: "GifFlu",
-                        home:  Scaffold( //home eh a tag q espera uma pagina representada por uma classe Widget
-                                appBar:  AppBar( // o instanceamento de Widgets/classes podem ser feitos sem o "new"
-                                      title: Text("Hello from demo!!"),
-                                ),
-                        ),
-                      theme: ThemeData(  // o new eh opcional
-                           primarySwatch: Colors.indigo,
-                           visualDensity: VisualDensity.adaptivePlatformDensity
-                      )
-              );
-              //  throw UnimplementedError();
-        }
-}
-*/
-
 
 
 // classe com construtor const  q inicialmente eh usada pelo "runApp()"
@@ -74,35 +50,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
       //  static final List<Scenes> pages = [MyHomePage(title: 'Incrementor',), LoremIpsum(), Options() ];
 
-        void _incrementCounter() {
+        void incrementCounter() {
                   super.setState(() { // passando funcao lambda/callback para o setState
                           this._counter++; // aqui o 'this' nao eh necessario
+                          //OU:   setState(  () =>  this._counter++  );
                   });
         }
 
-        void incrementCounter(){
-                  setState(  () =>  this._counter++  );
-        }
 
-        void _onTapItem(int index){
-               //   setState(() => _itemIndexSelect = index );
-              switch(index){
-                    case 1:
-                          Navigator.push(
-                                        super.context,
-                                        MaterialPageRoute( builder: (context) => const LoremIpsum() )
-                          );
-                          _MyHomePageState._itemIndexSelect = 1;
-                          break;
-                    case 2:
-                          Navigator.push(
-                                        super.context,
-                                        MaterialPageRoute( builder: (context) =>  Options() )
-                          );
-                          _MyHomePageState._itemIndexSelect = 2;
-                          break;
-              }
-        }
 
 
         // a funcao "build" abaixo funciona como um renderizador do State
@@ -164,27 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ],
 
 
-                          bottomNavigationBar: BottomNavigationBar (
-                                      backgroundColor: Colors.deepPurple,
-                                      unselectedItemColor: Colors.white,
-                                      selectedItemColor: const Color.fromARGB(255, 55, 3, 69),
-                                      onTap: this._onTapItem,
-
-                                      items: const  <BottomNavigationBarItem>[
-                                               BottomNavigationBarItem(
-                                                        label: "Incrementor",
-                                                        icon: Icon( Icons.numbers  ),
-                                               ),
-                                              BottomNavigationBarItem(
-                                                        label: "Lorem ipsum",
-                                                        icon: Icon( Icons.text_format  ),
-                                              ),
-                                              BottomNavigationBarItem(
-                                                        label: "Options",
-                                                        icon: Icon( Icons.image  ),
-                                              ),
-                                      ],
-                          )
+                          bottomNavigationBar: Bottombuttons.btnNbar
 
                 );
         }
@@ -198,3 +133,28 @@ class Elements {
         Widget?  body = null;
         List<Widget>?  footerBottoms = null;
 }
+
+
+
+
+/*
+class GiftApp extends StatelessWidget {
+
+        @override
+        Widget build(BuildContext context) { // funcao q constroi seu wiget
+              return MaterialApp(
+                        title: "GifFlu",
+                        home:  Scaffold( //home eh a tag q espera uma pagina representada por uma classe Widget
+                                appBar:  AppBar( // o instanceamento de Widgets/classes podem ser feitos sem o "new"
+                                      title: Text("Hello from demo!!"),
+                                ),
+                        ),
+                      theme: ThemeData(  // o new eh opcional
+                           primarySwatch: Colors.indigo,
+                           visualDensity: VisualDensity.adaptivePlatformDensity
+                      )
+              );
+              //  throw UnimplementedError();
+        }
+}
+*/
