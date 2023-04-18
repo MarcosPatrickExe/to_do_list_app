@@ -3,24 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:to_do_list/main.dart';
 import 'package:http/http.dart' as http ;
 import 'dart:convert'; //converter/mapear  json em  objeto
+import 'codeModels/model.dart';
 
 
-class Scenes{   }
+class IScenes{   }
 
 
-class LoremIpsum extends StatelessWidget implements Scenes{
-           LoremIpsum({super.key});
-
-          var _members = [];
-          final  TextStyle _font = const TextStyle(fontSize:  20.0);
-
-
-          void initState(){ // executa na main thread, ou seja, a thread de renderizacao da interface grafica
-
-          }
-
-
-
+class LoremIpsum extends StatelessWidget implements IScenes{
+          const LoremIpsum({super.key});
 
           @override
           Widget build(BuildContext context) {
@@ -42,14 +32,14 @@ class LoremIpsum extends StatelessWidget implements Scenes{
                                       ),
                               )
                         ),
-                        persistentFooterButtons: [],
+                        bottomNavigationBar: const BottomNavBarComp( curentScreenIndex:  1),
                 );
           }
 }
 
 
 
-class Options extends StatelessWidget implements Scenes {
+class Options extends StatelessWidget implements IScenes {
           Options({super.key});
 
           final ButtonStyle allBtnStyles = ElevatedButton.styleFrom(
@@ -96,7 +86,8 @@ class Options extends StatelessWidget implements Scenes {
                                         ],
                                 )
                            ),
-                          persistentFooterButtons: [],
+
+                          bottomNavigationBar: const BottomNavBarComp( curentScreenIndex: 2 ),
                   );
           }
 }
