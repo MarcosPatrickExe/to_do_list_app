@@ -3,8 +3,7 @@ import '../pages.dart';
 
 
 class BottomNavBarComp extends StatefulWidget {
-
-
+  
         @override
         State<BottomNavBarComp> createState() {
                         return BottomNavBarState();
@@ -51,7 +50,7 @@ class BottomNavBarState extends State<BottomNavBarComp>{
                                         case 1:
                                                 Navigator.push(
                                                 super.context,
-                                                MaterialPageRoute( builder: (context) => const LoremIpsum() )
+                                                MaterialPageRoute( builder: (context) =>  LoremIpsum() )
                                                 );
                                                 // _MyHomePageState._itemIndexSelect = 1;
                                                 break;

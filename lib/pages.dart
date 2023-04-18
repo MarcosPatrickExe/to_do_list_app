@@ -1,13 +1,26 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:to_do_list/main.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http ;
+import 'dart:convert'; //converter/mapear  json em  objeto
+
 
 class Scenes{   }
 
 
 class LoremIpsum extends StatelessWidget implements Scenes{
-          const LoremIpsum({super.key});
+           LoremIpsum({super.key});
+
+          var _members = [];
+          final  TextStyle _font = const TextStyle(fontSize:  20.0);
+
+
+          void initState(){ // executa na main thread, ou seja, a thread de renderizacao da interface grafica
+
+          }
+
+
+
 
           @override
           Widget build(BuildContext context) {
