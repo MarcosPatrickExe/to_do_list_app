@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                       ),
                                                       FloatingActionButton(
                                                                 onPressed: () {
-                                                                          setState( () {  _counter--; } );
+                                                                          super.setState( () {  _counter--; } );
                                                                 },
                                                                 backgroundColor: Colors.red,
                                                                 child:  const Icon(Icons.minimize),

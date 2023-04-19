@@ -9,6 +9,27 @@ import 'codeModels/model.dart';
 class IScenes{   }
 
 
+class Users extends StatelessWidget{
+      const  Users( {keyReceived} ) :  super(key : keyReceived);
+
+       @override
+        Widget build(BuildContext bc){
+                return  Scaffold(
+                        backgroundColor: const Color.fromARGB(255, 55, 3, 69),
+                        appBar: AppBar(
+                                     title:  const Text("Users"),
+                                     centerTitle: true,
+                                     toolbarHeight: 50.2,
+                                     backgroundColor: Colors.deepPurple,
+                        ),
+                        bottomNavigationBar: const BottomNavBarComp(curentScreenIndex: 3),
+                );
+       }
+}
+
+
+
+
 class LoremIpsum extends StatelessWidget implements IScenes{
           const LoremIpsum({super.key});
 

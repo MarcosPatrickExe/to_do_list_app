@@ -3,8 +3,8 @@ import '../pages.dart';
 import '../main.dart';
 
 
-class BottomNavBarComp extends StatefulWidget {
-        const BottomNavBarComp(  { super.key, required this.curentScreenIndex } ); //
+class BottomNavBarComp extends StatelessWidget {
+        const BottomNavBarComp(  { super.key, required this.curentScreenIndex } );
 
         //  const BottomNavBarComp(
         //            final Key? keyreceived,  // AQUI O 'keyreceived' eh obrigatorio e eh enviado para o  super-construtor nomeado via ":super(key: keyreceived)"
@@ -18,69 +18,72 @@ class BottomNavBarComp extends StatefulWidget {
         //
         final int curentScreenIndex;
 
-        @override
-        BottomNavBarState createState() { // retorno tbm pode ser do tipo "BottomNavBarState"
-                        return BottomNavBarState();
-        }
-}
-
-
-class BottomNavBarState extends State<BottomNavBarComp>{
 
         @override
-        void initState() {
-                  super.initState();
-                  dynamic index = super.widget.curentScreenIndex;
-                  print('current screen is:  $index'  );
-        }
+        Widget build( BuildContext buildContext){
+                dynamic index = this.curentScreenIndex;
+                print('current screen is:  $index'  );
 
-        void _onTapItem(int index){
-                //   setState(() => _itemIndexSelect = index );
-                switch(index){
-                        case 0:
-                                  Navigator.push(
-                                            super.context,
-                                            MaterialPageRoute( builder: (context) =>  const MyHomePage(title: 'Home') )
-                                  );
-                                  // _MyHomePageState._itemIndexSelect = 1;
-                                  break;
-                        case 1:
-                                     Navigator.push(
-                                              super.context,
-                                              MaterialPageRoute( builder: (context) => const LoremIpsum() )
-                                      );
-                                  //  _MyHomePageState._itemIndexSelect = 2;
-                                  break;
-                        case 2:
-                                      Navigator.push(
-                                              super.context,
-                                              MaterialPageRoute(builder: (context) => Options()),
-                                      );
-                                   break;
+
+                void  onTapItem( int index ){
+
+                          switch(index){
+                                case 0:
+                                            Navigator.push(
+                                                buildContext,
+                                                MaterialPageRoute( builder: (BuildContext bc) =>  const MyHomePage(title: 'Home Incrementor') )
+                                        );
+                                        break;
+                                case 1:
+                                        Navigator.push(
+                                                buildContext,
+                                                MaterialPageRoute( builder: (BuildContext bc) => const LoremIpsum() )
+                                        );
+                                      break;
+                                case 2:
+                                        Navigator.push(
+                                                buildContext,
+                                                MaterialPageRoute(builder: (BuildContext bc) => Options()),
+                                       );
+                                       break;
+                                case 3:
+                                        Navigator.push(
+                                                buildContext,
+                                                MaterialPageRoute(builder: (BuildContext bc) => const Users()),
+                                        );
+                                        break;
+                          }
                 }
-        }
 
-        @override
-        Widget build( BuildContext bc){
+
                 return BottomNavigationBar (
-                                backgroundColor: Colors.deepPurple,
                                 unselectedItemColor: Colors.white,
+                                unselectedLabelStyle: const TextStyle(color: Colors.white),
                                 selectedItemColor: const Color.fromARGB(255, 55, 3, 69),
-                                onTap: this._onTapItem,
-                                currentIndex: 1,
+                                onTap: onTapItem,
+                                currentIndex: index,
+                                showUnselectedLabels: true,
 
                                 items: const <BottomNavigationBarItem>[
                                         BottomNavigationBarItem(
                                                 label: "Incrementor",
                                                 icon: Icon( Icons.numbers ),
+                                                backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
-                                                label: "List of users",
+                                                label: "LoremIpsum",
                                                 icon: Icon( Icons.list ),
+                                                backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
                                                 label: "Options",
                                                 icon: Icon( Icons.image ),
+                                                backgroundColor:  Colors.deepPurple,
+                                        ),
+                                        BottomNavigationBarItem(
+                                                label: 'Users',
+                                                icon: Icon( Icons.message ),
+                                                backgroundColor:  Colors.deepPurple,
                                         ),
                                 ],
                 );
