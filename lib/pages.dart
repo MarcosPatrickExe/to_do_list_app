@@ -1,19 +1,46 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:to_do_list/main.dart';
+// import 'package:http/http.dart';
 import 'package:http/http.dart' as http ;
 import 'dart:convert'; //converter/mapear  json em  objeto
 import 'codeModels/model.dart';
 
 
-class IScenes{   }
+class IScenes {   }
 
 
-class Users extends StatelessWidget{
-      const  Users( {keyReceived} ) :  super(key : keyReceived);
+class Users extends StatefulWidget{
+        const Users( {super.key} );
+
+        @override
+        State<Users> createState() =>  UsersState();
+}
+
+
+class UsersState extends State<Users>{
+     // const  UsersState( {keyReceived} ) :  super(key : keyReceived);
+
+        late  final  dynamic  _members;
+
+        @override
+        void initState(){
+                super.initState();
+                this._loadData();
+        }
+
+        _loadData() async {  // funcoes assincronas sao disparadas por outro processo ao inves da thread principal
+                    String url = "https://api.github.com/orgs/adobe/members";
+
+                    http.Response response =  await  http.get( Uri.parse(url) );
+                    // passando esses dados para a UI thread (a thread principal):
+                    super.setState( ()  {
+                              this._members = jsonDecode( response.body);
+                              print(_members);
+                    } );
+        }
+
 
        @override
-        Widget build(BuildContext bc){
+        Widget build( BuildContext bc ){
                 return  Scaffold(
                         backgroundColor: const Color.fromARGB(255, 55, 3, 69),
                         appBar: AppBar(
@@ -31,7 +58,7 @@ class Users extends StatelessWidget{
 
 
 class LoremIpsum extends StatelessWidget implements IScenes{
-          const LoremIpsum({super.key});
+          const LoremIpsum( {super.key} );
 
           @override
           Widget build(BuildContext context) {
