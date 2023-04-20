@@ -25,7 +25,7 @@ class BottomNavBarComp extends StatelessWidget {
                 print('current screen is:  $index'  );
 
 
-                void  onTapItem( int index ){
+                void  _onTapItem( int index ){
 
                           switch(index){
                                 case 0:
@@ -60,7 +60,7 @@ class BottomNavBarComp extends StatelessWidget {
                                 unselectedItemColor: Colors.white,
                                 unselectedLabelStyle: const TextStyle(color: Colors.white),
                                 selectedItemColor: const Color.fromARGB(255, 55, 3, 69),
-                                onTap: onTapItem,
+                                onTap: _onTapItem,
                                 currentIndex: index,
                                 showUnselectedLabels: true,
 

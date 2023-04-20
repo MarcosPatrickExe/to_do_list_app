@@ -15,11 +15,10 @@ class Users extends StatefulWidget{
         State<Users> createState() =>  UsersState();
 }
 
-
 class UsersState extends State<Users>{
      // const  UsersState( {keyReceived} ) :  super(key : keyReceived);
-
         late  final  dynamic  _members;
+        final _textStyle = const TextStyle( fontSize: 20.0, color: Colors.white);
 
         @override
         void initState(){
@@ -27,7 +26,7 @@ class UsersState extends State<Users>{
                 this._loadData();
         }
 
-        _loadData() async {  // funcoes assincronas sao disparadas por outro processo ao inves da thread principal
+        void _loadData() async {  // funcoes assincronas sao disparadas por outro processo ao inves da thread principal, nao interferindo na renderizacao da UI
                     String url = "https://api.github.com/orgs/adobe/members";
 
                     http.Response response =  await  http.get( Uri.parse(url) );
@@ -38,6 +37,14 @@ class UsersState extends State<Users>{
                     } );
         }
 
+        Widget _buildRow( int position ){
+                  return ListTile(
+                              title: Text(
+                                    "${_members[position]["login"] }",
+                                     style: this._textStyle,
+                              ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
+                  );
+        }
 
        @override
         Widget build( BuildContext bc ){
@@ -48,6 +55,11 @@ class UsersState extends State<Users>{
                                      centerTitle: true,
                                      toolbarHeight: 50.2,
                                      backgroundColor: Colors.deepPurple,
+                        ),
+                        body: ListView.builder( // lista com os membros obtidos da requisicao
+                                  padding: const EdgeInsets.all(18.0),  // atribuindo o padding para todos os lados
+                                  itemCount: this._members.length,
+                                  itemBuilder: (BuildContext buildCont, int position ) => _buildRow( position ) ,
                         ),
                         bottomNavigationBar: const BottomNavBarComp(curentScreenIndex: 3),
                 );
