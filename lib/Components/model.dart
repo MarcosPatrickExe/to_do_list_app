@@ -87,7 +87,8 @@ class BottomNavBarComp extends StatelessWidget {
                                         ),
                                 ],
                 );
-        }
+        }// build()
+
 
       /*  BottomButtons( Function funcItem){
                  this._onTapItem = funcItem;

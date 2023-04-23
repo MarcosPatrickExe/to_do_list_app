@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'package:http/http.dart';
 import 'package:http/http.dart' as http ;
+import 'package:to_do_list/codeModels/member.dart';
 import 'dart:convert'; //converter/mapear  json em  objeto
-import 'codeModels/model.dart';
+import 'Components/model.dart';
 
 
 class IScenes {   }
@@ -17,7 +18,7 @@ class Users extends StatefulWidget{
 
 class UsersState extends State<Users>{
      // const  UsersState( {keyReceived} ) :  super(key : keyReceived);
-        late  final  dynamic  _members;
+        late   List<Member>  _members = [];
         final _textStyle = const TextStyle( fontSize: 20.0, color: Colors.white);
 
         @override
@@ -28,8 +29,8 @@ class UsersState extends State<Users>{
 
         void _loadData() async {  // funcoes assincronas sao disparadas por outro processo ao inves da thread principal, nao interferindo na renderizacao da UI
                     String url = "https://api.github.com/orgs/adobe/members";
-
                     http.Response response =  await  http.get( Uri.parse(url) );
+
                     // passando esses dados para a UI thread (a thread principal):
                     super.setState( ()  {
                               this._members = jsonDecode( response.body);
@@ -38,9 +39,14 @@ class UsersState extends State<Users>{
         }
 
         Widget _buildRow( int position ){
+
                   return ListTile(
+                              leading:  CircleAvatar(
+                                    backgroundColor:  Colors.green,
+                                    backgroundImage:   Image.network(  _members[position].avatarUrl  ) as ImageProvider<NetworkImage>,
+                              ),
                               title: Text(
-                                    "${_members[position]["login"] }",
+                                    _members[position].login,
                                      style: this._textStyle,
                               ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
                   );

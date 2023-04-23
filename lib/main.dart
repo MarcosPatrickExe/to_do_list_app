@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_list/pages.dart';
-import 'codeModels/model.dart' ;
+import 'Components/model.dart' ;
 
 
 void main() {
