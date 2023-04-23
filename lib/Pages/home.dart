@@ -89,6 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 child:  const Icon(Icons.add),
                                         ),
                                         FloatingActionButton(
+                                                heroTag: UniqueKey(), // prevents the error:  "There are multiple heroes that share the same tag within a subtree."
                                                 onPressed: () {
                                                         super.setState( ()=> {  _counter-- } );
                                                 },

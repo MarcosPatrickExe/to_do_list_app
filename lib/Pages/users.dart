@@ -18,7 +18,7 @@ class Users extends StatefulWidget{
 
 class UsersState extends State<Users>{
         // const  UsersState( {keyReceived} ) :  super(key : keyReceived);
-        late   List<Member>  _members = [];
+        List<dynamic> _members= [];
         final _textStyle = const TextStyle( fontSize: 20.0, color: Colors.white);
 
 
@@ -34,10 +34,11 @@ class UsersState extends State<Users>{
 
                 // passando esses dados para a UI thread (a thread principal):
                 super.setState( ()  {
-                        this._members = jsonDecode( response.body);
+                      //  this._members = jsonDecode( response.body);
+                         this._members = jsonDecode( response.body );
 
-                        print("======> MEMBROS OBTIDOS!!!  <=======");
-                        print(_members);
+                        print("=======================> Logins dos MEMBROS OBTIDOS!!!  <============================== \n");
+                        print("primeiro user: ${_members[0]}");
                 } );
         }
 
@@ -45,12 +46,14 @@ class UsersState extends State<Users>{
 
         Widget _buildRow( int position ){
               return ListTile(
+
+                    key: Key( "$position") ,
                     leading:  CircleAvatar(
                             backgroundColor:  Colors.green,
-                            backgroundImage:   Image.network(  _members[position].avatarUrl  ) as ImageProvider<NetworkImage>,
+                            backgroundImage:  NetworkImage(  _members[position]["avatar_url"]  ) , //as ImageProvider<NetworkImage>
                     ),
                     title: Text(
-                          _members[position].login,
+                          _members[position]["login"],
                           style: this._textStyle,
                     ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
               );
@@ -69,7 +72,7 @@ class UsersState extends State<Users>{
                               backgroundColor: Colors.deepPurple,
                       ),
                       body: ListView.builder( // lista com os membros obtidos da requisicao
-                              padding: const EdgeInsets.all(18.0),  // atribuindo o padding para todos os lados
+                              padding: const EdgeInsets.all(25.0),  // atribuindo o padding para todos os lados
                               itemCount: this._members.length,
                               itemBuilder: (BuildContext buildCont, int position ) => _buildRow( position ) ,
                       ),
