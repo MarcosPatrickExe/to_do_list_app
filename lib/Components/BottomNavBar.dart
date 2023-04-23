@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import '../pages/users.dart';
 import '../pages.dart';
-import '../main.dart';
+import '../pages/home.dart';
+
+
 
 
 class BottomNavBarComp extends StatelessWidget {
@@ -21,12 +24,11 @@ class BottomNavBarComp extends StatelessWidget {
 
         @override
         Widget build( BuildContext buildContext){
+
                 dynamic index = this.curentScreenIndex;
                 print('current screen is:  $index'  );
 
-
                 void  _onTapItem( int index ){
-
                           switch(index){
                                 case 0:
                                             Navigator.push(
