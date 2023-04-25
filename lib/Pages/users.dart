@@ -18,7 +18,7 @@ class Users extends StatefulWidget{
 
 class UsersState extends State<Users>{
         // const  UsersState( {keyReceived} ) :  super(key : keyReceived);
-        List<dynamic> _members= [];
+        List<Member> _members = <Member>[];
         final _textStyle = const TextStyle( fontSize: 20.0, color: Colors.white);
 
 
@@ -35,7 +35,13 @@ class UsersState extends State<Users>{
                 // passando esses dados para a UI thread (a thread principal):
                 super.setState( ()  {
                       //  this._members = jsonDecode( response.body);
-                         this._members = jsonDecode( response.body );
+                         var auxMembers = jsonDecode( response.body );
+
+                         for(var member in auxMembers){
+                                this._members.add(
+                                         Member( member["login"], member["avatar_url"]  )
+                                );
+                         }
 
                         print("=======================> Logins dos MEMBROS OBTIDOS!!!  <============================== \n");
                         print("primeiro user: ${_members[0]}");
@@ -46,14 +52,12 @@ class UsersState extends State<Users>{
 
         Widget _buildRow( int position ){
               return ListTile(
-
-                    key: Key( "$position") ,
                     leading:  CircleAvatar(
                             backgroundColor:  Colors.green,
-                            backgroundImage:  NetworkImage(  _members[position]["avatar_url"]  ) , //as ImageProvider<NetworkImage>
+                            backgroundImage:  NetworkImage(  _members[position].avatarUrl ) , //as ImageProvider<NetworkImage>
                     ),
                     title: Text(
-                          _members[position]["login"],
+                          _members[position].login,
                           style: this._textStyle,
                     ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
               );
