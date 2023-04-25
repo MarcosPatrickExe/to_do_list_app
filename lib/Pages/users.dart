@@ -18,7 +18,7 @@ class Users extends StatefulWidget{
 
 class UsersState extends State<Users>{
         // const  UsersState( {keyReceived} ) :  super(key : keyReceived);
-        List<Member> _members = <Member>[];
+        final List<Member>? _members = [];
         final _textStyle = const TextStyle( fontSize: 20.0, color: Colors.white);
 
 
@@ -38,13 +38,13 @@ class UsersState extends State<Users>{
                          var auxMembers = jsonDecode( response.body );
 
                          for(var member in auxMembers){
-                                this._members.add(
+                                this._members?.add(
                                          Member( member["login"], member["avatar_url"]  )
                                 );
                          }
 
                         print("=======================> Logins dos MEMBROS OBTIDOS!!!  <============================== \n");
-                        print("primeiro user: ${_members[0]}");
+                        print("primeiro user: ${this._members?[0]}");
                 } );
         }
 
@@ -54,12 +54,17 @@ class UsersState extends State<Users>{
               return ListTile(
                     leading:  CircleAvatar(
                             backgroundColor:  Colors.green,
-                            backgroundImage:  NetworkImage(  _members[position].avatarUrl ) , //as ImageProvider<NetworkImage>
+                            backgroundImage:  NetworkImage(  this._members?[position].avatarUrl ?? "" ) , //as ImageProvider<NetworkImage>
                     ),
-                    title: Text(
-                          _members[position].login,
+                    title:  Text(
+                          this._members?[position].login ?? "",
                           style: this._textStyle,
                     ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
+                    subtitle: const Text(
+                             "subtitle",
+                              style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                    style: ListTileStyle.drawer,
               );
         }
 
@@ -75,10 +80,24 @@ class UsersState extends State<Users>{
                               toolbarHeight: 50.2,
                               backgroundColor: Colors.deepPurple,
                       ),
-                      body: ListView.builder( // lista com os membros obtidos da requisicao
-                              padding: const EdgeInsets.all(25.0),  // atribuindo o padding para todos os lados
-                              itemCount: this._members.length,
-                              itemBuilder: (BuildContext buildCont, int position ) => _buildRow( position ) ,
+                      body:  Center(
+                            child: Container(
+                                decoration: const   BoxDecoration(
+                                        color:  Color.fromARGB(80, 26, 0, 51),
+                                        borderRadius: BorderRadius.all( Radius.circular(10.0) )
+                                ),
+                                constraints:  BoxConstraints(
+                                        minWidth: 110.0,
+                                        minHeight: 210.0,
+                                        maxHeight: MediaQuery.of(bc).size.height *0.8,
+                                        maxWidth: MediaQuery.of(bc).size.width *0.9,
+                                ),
+                                child: ListView.builder(
+                                      padding: const EdgeInsets.all(20.0),
+                                      itemCount: this._members?.length,
+                                      itemBuilder: (BuildContext bc, int position)=> _buildRow(position)
+                                )
+                            ),
                       ),
                       bottomNavigationBar: const BottomNavBarComp(curentScreenIndex: 3),
               );
