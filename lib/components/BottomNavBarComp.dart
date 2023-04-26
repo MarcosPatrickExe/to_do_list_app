@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../pages/users.dart';
-import '../Pages/pages.dart';
-import '../pages/home.dart';
-import '../pages/loremIpsum.dart';
+import '../pages/Users.dart';
+import '../pages/Login.dart';
+import '../pages/Home.dart';
+import '../pages/Community.dart';
 
 
 
@@ -29,23 +29,23 @@ class BottomNavBarComp extends StatelessWidget {
                 print('current screen is:  $index'  );
 
                 void  _onTapItem( int index ){
-                          switch(index){
+                          switch( index ){
                                 case 0:
-                                            Navigator.push(
-                                                buildContext,
-                                                MaterialPageRoute( builder: (BuildContext bc) =>  const MyHomePage(title: 'Home Incrementor') )
-                                        );
+                                         Navigator.push(
+                                              buildContext,
+                                              MaterialPageRoute( builder: (BuildContext bc) =>  const Home( title: 'Home Incrementor' ) )
+                                         );
                                         break;
                                 case 1:
                                         Navigator.push(
                                                 buildContext,
-                                                MaterialPageRoute( builder: (BuildContext bc) => const LoremIpsum() )
+                                                MaterialPageRoute( builder: (BuildContext bc) => const Login() )
                                         );
                                       break;
                                 case 2:
                                         Navigator.push(
                                                 buildContext,
-                                                MaterialPageRoute(builder: (BuildContext bc) => Options()),
+                                                MaterialPageRoute(builder: (BuildContext bc) => Community()),
                                        );
                                        break;
                                 case 3:
@@ -68,12 +68,12 @@ class BottomNavBarComp extends StatelessWidget {
 
                                 items: const <BottomNavigationBarItem>[
                                         BottomNavigationBarItem(
-                                                label: "Incrementor",
+                                                label: "Home",
                                                 icon: Icon( Icons.numbers ),
                                                 backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
-                                                label: "LoremIpsum",
+                                                label: "Community",
                                                 icon: Icon( Icons.list ),
                                                 backgroundColor:  Colors.deepPurple,
                                         ),

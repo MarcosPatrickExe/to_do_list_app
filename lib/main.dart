@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list/Pages/pages.dart';
-import 'Pages/home.dart';
+import 'pages/Home.dart';
 
 
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
                                     primarySwatch: null ,//Colors.orange,
                                     secondaryHeaderColor:  null, //Colors.black
                             ),
-                            home: const MyHomePage(title: "Incrementador"),
+                            home: const Home( title: "Incrementador" ),
                   );
           }
 }

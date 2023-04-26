@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../Components/BottomNavBar.dart';
-import '../Models/member.dart';
+import '../components/BottomNavBarComp.dart';
+import '../models/Member.dart';
 import 'package:http/http.dart' as http;//converter/mapear  json em  objeto
 import 'dart:convert';
 
@@ -37,7 +37,7 @@ class UsersState extends State<Users>{
                       //  this._members = jsonDecode( response.body);
                          var auxMembers = jsonDecode( response.body );
 
-                         for(var member in auxMembers){
+                         for( var member in auxMembers){
                                 this._members?.add(
                                          Member( member["login"], member["avatar_url"]  )
                                 );
@@ -53,7 +53,7 @@ class UsersState extends State<Users>{
         Widget _buildRow( int position ){
               return ListTile(
                     leading:  CircleAvatar(
-                            backgroundColor:  Colors.deepPurple.shade200,
+                            backgroundColor:  Colors.deepPurple.shade200, // exibido enquanto a imagem nao estiver sendo carregada
                             backgroundImage:  NetworkImage(  this._members?[position].avatarUrl ?? "" ) , //as ImageProvider<NetworkImage>
                     ),
                     title:  Text(
@@ -82,21 +82,21 @@ class UsersState extends State<Users>{
                       ),
                       body:  Center(
                             child: Container(
-                                  decoration: const   BoxDecoration(
-                                          color:  Color.fromARGB(80, 26, 0, 51),
-                                          borderRadius: BorderRadius.all( Radius.circular(10.0) )
-                                  ),
-                                  constraints:  BoxConstraints(
-                                          minWidth: 110.0,
-                                          minHeight: 210.0,
-                                          maxHeight: MediaQuery.of(bc).size.height *0.8,
-                                          maxWidth: MediaQuery.of(bc).size.width *0.9,
-                                  ),
-                                  child: ListView.builder(
-                                        padding: const EdgeInsets.all(20.0),
-                                        itemCount: this._members?.length,
-                                        itemBuilder: (BuildContext bc, int position)=> _buildRow(position)
-                                  )
+                                    decoration: const   BoxDecoration(
+                                            color:  Color.fromARGB(80, 26, 0, 51),
+                                            borderRadius: BorderRadius.all( Radius.circular(10.0) )
+                                    ),
+                                    constraints:  BoxConstraints(
+                                            minWidth: 110.0,
+                                            minHeight: 210.0,
+                                            maxHeight: MediaQuery.of(bc).size.height *0.8,
+                                            maxWidth: MediaQuery.of(bc).size.width *0.9,
+                                    ),
+                                    child: ListView.builder(
+                                          padding: const EdgeInsets.all(20.0),
+                                          itemCount: this._members?.length,
+                                          itemBuilder: (BuildContext bc, int position)=> _buildRow(position)
+                                    )
                             ),
                       ),
                       bottomNavigationBar: const BottomNavBarComp(curentScreenIndex: 3),

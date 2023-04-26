@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../Components/BottomNavBar.dart';
+import '../components/BottomNavBarComp.dart';
 
 
 
-class Options extends StatelessWidget {
-          Options({super.key});
+class Community extends StatelessWidget {
+           Community( {super.key} );
 
-          final ButtonStyle allBtnStyles = ElevatedButton.styleFrom(
+          final ButtonStyle allBtnStyles =  ElevatedButton.styleFrom(
                     minimumSize: const Size(100.0, 50.0),
                     maximumSize: const Size(200.0, 100.0),
                     backgroundColor: const Color.fromARGB(255, 128, 0, 177),

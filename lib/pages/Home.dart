@@ -1,32 +1,29 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../Components/BottomNavBar.dart';
+import '../components/BottomNavBarComp.dart';
 
 
 
 // componente que representa uma pagina com estado dinamico, o qual vai ser gerenciado pela classe "_MyHomePageState"
-class MyHomePage extends StatefulWidget {  // widget com estado mutavel
+class Home extends StatefulWidget {  // widget com estado mutavel
 
-        const MyHomePage({ // parametros dentro de chaves sao opcionais, exceto aqueles com "required"
+        const Home({ // parametros dentro de chaves sao opcionais, exceto aqueles com "required"
                   super.key, // recebe e ja envia a key para o construtor
                   String this.title = "default name",  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
         });
         final String title;
-
-
-
         // toda classe com propriedades final devem ter um construtor const !!
 
         @override
-        State<MyHomePage> createState() {   // retorno tbm pode ser do tipo "_MyHomePageState"
-                  return _MyHomePageState();// retornando a classe estado com interface do estado
+        State<Home> createState() {   // retorno tbm pode ser do tipo "_MyHomePageState"
+                  return _HomeState();// retornando a classe estado com interface do estado
         }
 }
 
 
 
 // componente que representa o estado da pagina  "MyHomePage"
-class _MyHomePageState extends State<MyHomePage> {
+class _HomeState extends State<Home> {
         int _counter = 0; // variavel pertecente a interface (build()) do State
         static dynamic _itemIndexSelect = 0;
 
