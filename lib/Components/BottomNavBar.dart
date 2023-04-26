@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../pages/users.dart';
-import '../pages.dart';
+import '../Pages/pages.dart';
 import '../pages/home.dart';
-
+import '../pages/loremIpsum.dart';
 
 
 
