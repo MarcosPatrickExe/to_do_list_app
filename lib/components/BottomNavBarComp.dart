@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../pages/Users.dart';
-import '../pages/Login.dart';
+import '../pages/Signup.dart';
 import '../pages/Home.dart';
 import '../pages/Community.dart';
 
@@ -39,7 +39,7 @@ class BottomNavBarComp extends StatelessWidget {
                                 case 1:
                                         Navigator.push(
                                                 buildContext,
-                                                MaterialPageRoute( builder: (BuildContext bc) => const Login() )
+                                                MaterialPageRoute( builder: (BuildContext bc) => const Signup() )
                                         );
                                       break;
                                 case 2:

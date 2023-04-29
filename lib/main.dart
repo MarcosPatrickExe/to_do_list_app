@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'pages/Home.dart';
-import 'pages/Login.dart';
+import 'pages/Signup.dart';
+
 
 
 void main() {
          runApp(   const MyApp()  ); // antes: const MyApp()
 }
-
 
 
 // classe com construtor const  q inicialmente eh usada pelo "runApp()"
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
                                     primarySwatch: null ,//Colors.orange,
                                     secondaryHeaderColor:  null, //Colors.black
                             ),
-                            home: const Login(), // title: "Incrementador"
+                            home: const Signup(), // title: "Incrementador"
                   );
           }
 }

@@ -51,21 +51,21 @@ class UsersState extends State<Users>{
 
 
         Widget _buildRow( int position ){
-              return ListTile(
-                    leading:  CircleAvatar(
-                            backgroundColor:  Colors.deepPurple.shade200, // exibido enquanto a imagem nao estiver sendo carregada
-                            backgroundImage:  NetworkImage(  this._members?[position].avatarUrl ?? "" ) , //as ImageProvider<NetworkImage>
-                    ),
-                    title:  Text(
-                          this._members?[position].login ?? "",
-                          style: this._textStyle,
-                    ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
-                    subtitle: const Text(
-                             "subtitle",
-                              style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
-                    style: ListTileStyle.drawer,
-              );
+                return ListTile(
+                        leading:  CircleAvatar(
+                                backgroundColor:  Colors.deepPurple.shade200, // exibido enquanto a imagem nao estiver sendo carregada
+                                backgroundImage:  NetworkImage(  this._members?[position].avatarUrl ?? "" ) , //as ImageProvider<NetworkImage>
+                        ),
+                        title:  Text(
+                              this._members?[position].login ?? "",
+                              style: this._textStyle,
+                        ), // primeiro indice na lista "_members" ira retornar um mapa, e nesse mapa acessamos a chave "login" do JSON obtido
+                        subtitle: const Text(
+                                 "subtitle",
+                                  style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                        style: ListTileStyle.drawer,
+                );
         }
 
 
