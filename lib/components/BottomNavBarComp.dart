@@ -73,18 +73,18 @@ class BottomNavBarComp extends StatelessWidget {
                                                 backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
-                                                label: "Community",
-                                                icon: Icon( Icons.list ),
+                                                label: "Login",
+                                                icon: Icon( Icons.login ),
                                                 backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
-                                                label: "Options",
-                                                icon: Icon( Icons.image ),
+                                                label: "Community",
+                                                icon: Icon( Icons.person_sharp ),
                                                 backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
                                                 label: 'Users',
-                                                icon: Icon( Icons.message ),
+                                                icon: Icon( Icons.verified_user_sharp ),
                                                 backgroundColor:  Colors.deepPurple,
                                         ),
                                 ],

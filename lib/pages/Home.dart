@@ -77,23 +77,23 @@ class _HomeState extends State<Home> {
 
                       persistentFooterButtons: <Widget>[
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children:   <Widget>[
-                                        FloatingActionButton (
-                                                onPressed:  this.incrementCounter,
-                                                // aqui o 'this' eh opcional
-                                                tooltip: 'Increment',
-                                                child:  const Icon(Icons.add),
-                                        ),
-                                        FloatingActionButton(
-                                                heroTag: UniqueKey(), // prevents the error:  "There are multiple heroes that share the same tag within a subtree."
-                                                onPressed: () {
-                                                        super.setState( ()=> {  _counter-- } );
-                                                },
-                                                backgroundColor: Colors.red,
-                                                child:  const Icon(Icons.minimize),
-                                        ),
-                                ],
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children:   <Widget>[
+                                            FloatingActionButton (
+                                                    onPressed:  this.incrementCounter,
+                                                    // aqui o 'this' eh opcional
+                                                    tooltip: 'Increment',
+                                                    child:  const Icon(Icons.add),
+                                            ),
+                                            FloatingActionButton(
+                                                    heroTag: UniqueKey(), // prevents the error:  "There are multiple heroes that share the same tag within a subtree."
+                                                    onPressed: () {
+                                                            super.setState( ()=> {  _counter-- } );
+                                                    },
+                                                    backgroundColor: Colors.red,
+                                                    child:  const Icon(Icons.minimize),
+                                            ),
+                                    ],
                               )
                       ],
 

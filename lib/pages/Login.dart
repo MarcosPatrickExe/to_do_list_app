@@ -8,6 +8,12 @@ import '../components/BottomNavBarComp.dart';
 class Login extends StatelessWidget {
         const Login( {super.key} );
 
+        final _textStyled = const TextStyle(
+                color: Colors.deepPurple,
+                fontSize: 20.0,
+        );
+
+
         @override
         Widget build( BuildContext context ) {
                 return Scaffold(
@@ -35,33 +41,50 @@ class Login extends StatelessWidget {
                                       constraints:  BoxConstraints(
                                                 minWidth: 110.0,
                                                 minHeight: 210.0,
-                                                maxHeight: MediaQuery.of(context).size.height *0.5,
+                                                maxHeight: MediaQuery.of(context).size.height *0.7,
                                                 maxWidth: MediaQuery.of(context).size.width *0.8,
                                       ),
                                       child:  Column(
-                                                children:  const  <Widget>[
-                                                     Positioned(
-                                                            left: 0,
-                                                            top: 0,
-                                                            child:  Text(
-                                                                      "Username",
-                                                                      textAlign: TextAlign.center,
-                                                                      style: TextStyle( color: Colors.white , fontSize: 20.0),
-                                                            ),
+                                                children:   <Widget>[
+                                                    const Text(
+                                                            "Username",
+                                                            textAlign: TextAlign.center,
+                                                            style: TextStyle( color: Colors.white , fontSize: 30.0),
                                                     ),
-                                                     Positioned(
-                                                            left: 10.0,
-                                                            bottom: 30.0,
-                                                            child:   TextField (
-                                                                      maxLength: 20,
-                                                                      style: TextStyle(
-                                                                                height: 20.0,
-                                                                                color: Colors.white,
-                                                                                fontSize: 20.0,
-                                                                                backgroundColor: Colors.deepPurple,
-                                                                      ),
+                                                    const Text(
+                                                              "Email",
+                                                              textAlign: TextAlign.left,
+                                                              style: TextStyle( color: Colors.white , fontSize: 10.0),
+                                                    ),
+                                                    TextFormField (
+                                                            maxLines: 1,
+                                                            maxLength: 20,
+                                                            keyboardType: TextInputType.emailAddress,
+                                                             decoration:  InputDecoration(
+                                                                      icon: Icon( Icons.email),
+                                                                      hintText: "email",
+                                                                      hintStyle: this._textStyled,
+                                                             ),
+                                                            style: const TextStyle(
+                                                                      color: Colors.white,
+                                                                      fontSize: 20.0,
                                                             ),
-                                                     ),
+                                                          ),
+                                                        Text("Password:"),
+                                                        TextFormField (
+                                                                  maxLines: 1,
+                                                                  maxLength: 10,
+                                                                  keyboardType: TextInputType.text,
+                                                                  decoration:  InputDecoration(
+                                                                        icon: Icon( Icons.password),
+                                                                        hintText: "password",
+                                                                        hintStyle: this._textStyled,
+                                                              ),
+                                                              style: const TextStyle(
+                                                                    color: Colors.white,
+                                                                    fontSize: 20.0,
+                                                              ),
+                                                        ),
                                                 ]
                                       )
                                 )
