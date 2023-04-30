@@ -99,7 +99,7 @@ class UsersState extends State<Users>{
                                     )
                             ),
                       ),
-                      bottomNavigationBar: const BottomNavBarComp(curentScreenIndex: 3),
+                      bottomNavigationBar: const BottomNavBarComp(curentScreenIndex: 2),
               );
         }
 }

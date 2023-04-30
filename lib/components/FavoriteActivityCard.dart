@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:to_do_list/pages/FavoritesActivities.dart';
 import '../models/Activity.dart';
 
 
@@ -11,7 +12,7 @@ class FavoriteActivityCard extends StatelessWidget{
 
 
       @override
-      Widget build( BuildContext bc){
+      Widget build( BuildContext  favoriteActivitiesContext ){
             return Card(
                       margin: const EdgeInsets.all(10.0),
                       color: const Color.fromARGB(175, 87,  5,  110),
@@ -29,7 +30,10 @@ class FavoriteActivityCard extends StatelessWidget{
                                           Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
-                                                      Text( this._activityReceived.title, style: TextStyle( fontSize: 20.0, color: Colors.white), ),
+                                                      Container(
+                                                            width: 210,
+                                                            child: Text( this._activityReceived.title, style: TextStyle( fontSize: 20.0, color: Colors.white), ),
+                                                      ),
                                                       SizedBox( height: 10.0, ),
                                                       Container(
                                                              width: 210.0,
@@ -41,12 +45,15 @@ class FavoriteActivityCard extends StatelessWidget{
                                                   icon: Icon( Icons.more_vert, color: Colors.white70, size: 20, ),
                                                   itemBuilder: (BuildContext bc)=>[
                                                           PopupMenuItem(
-                                                              child: ListTile(
-                                                                      title: Text("Remover tarefa"),
-                                                                      onTap: (){
-                                                                              Navigator.pop( bc );
-                                                                      },
-                                                              )
+                                                                child: ListTile(
+                                                                        title: Text("Remover tarefa"),
+                                                                        onTap: (){
+                                                                                Navigator.pop( bc );
+                                                                                favoriteActivitiesContext // contexto que representa a classe-pai "FavoritiesAcitivitiesState"
+                                                                                        .findAncestorStateOfType<FavoriteActivitiesState>()
+                                                                                                ?.removeFavoriteItemList( this._activityReceived ); // metodo da classe-pai "FavoritiesAcitivitiesState"
+                                                                        },
+                                                                )
                                                           )
                                                  ]
                                           )

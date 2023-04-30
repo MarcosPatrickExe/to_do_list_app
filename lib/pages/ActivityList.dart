@@ -4,59 +4,83 @@ import '../models/Activity.dart';
 import '../pages/FavoritesActivities.dart';
 
 
-class ActivityList extends StatelessWidget{
 
-      final _listActivities = <Activity>[
-                  Activity(
-                          "Comprar ração do gato",
-                          "Lembre-se de resolver a para do motorista.....",
-                          DateTime(2023, 04, 10),
-                          DateTime(2023, 04, 20),
-                          "João",
-                          false
-                  ),
-                  Activity(
-                          "Malhar às 17h",
-                          "Lembre-se de resolver a para do motorista.....",
-                          DateTime(2023, 04, 10),
-                          DateTime(2023, 04, 20),
-                          "João",
-                          true
-                  ),
-                  Activity(
-                          "Resolver algo",
-                          "Lembre-se de resolver a para do motoristaLembre-se de resolver a para do motoristaLembre-se de resolver a para do motorista.....",
-                           DateTime(2023, 04, 10),
-                           DateTime(2023, 04, 20),
-                          "João",
-                          false
-                  ),
-                  Activity(
-                          "Comprar ração do gato",
-                          "Lembre-se de resolver a para do motorista.....",
-                          DateTime(2023, 04, 10),
-                          DateTime(2023, 04, 20),
-                          "João",
-                          false
-                  ),
-                  Activity(
-                          "Malhar às 17h",
-                          "Lembre-se de resolver a para do motorista.....",
-                          DateTime(2023, 04, 10),
-                          DateTime(2023, 04, 20),
-                          "João",
-                          false
-                  ),
-                  Activity(
-                          "Resolver algo",
-                          "Lembre-se de resolver a para do motoristaLembre-se de resolver a para do motoristaLembre-se de resolver a para do motorista.....",
-                          DateTime(2023, 04, 10),
-                          DateTime(2023, 04, 20),
-                          "João",
-                          true
-                  ),
-      ];
+class ActivityList extends StatefulWidget {
 
+            var listActivities = <Activity>[
+                  Activity(
+                            "Comprar a ração dos gatos",
+                            "Não posso esquecer de maneira alguma de comprar o alimento dos meus filhos....",
+                            DateTime(2023, 04, 10),
+                            DateTime(2023, 04, 20),
+                            "João",
+                            false
+                  ),
+                  Activity(
+                            "Malhar às 17h",
+                            "Nesse dia será o treino de pernas e agachamento..",
+                            DateTime(2023, 06, 10),
+                            DateTime(2023, 06, 11),
+                            "João",
+                            true
+                  ),
+                  Activity(
+                            "Resolver o problema da pia do vizinho",
+                            "Meu vizinho faz tempo que me cobra acerca da sua pia da cozinha que fiquei de consertar....",
+                            DateTime(2023, 04, 10),
+                            DateTime(2023, 04, 20),
+                            "João",
+                            false
+                  ),
+                  Activity(
+                            "Limpar a casa",
+                            "A casa está muito suja, devo ajeitar ela o quanto antes!!",
+                            DateTime(2023, 04, 10),
+                            DateTime(2023, 04, 20),
+                            "João",
+                            false
+                  ),
+                  Activity(
+                            "Ir buscar meu filho na escola",
+                            "João não pode ficar muito tempo me esperando na escola.",
+                            DateTime(2023, 04, 20),
+                            DateTime(2023, 05, 25),
+                            "João",
+                            false
+                  ),
+                  Activity(
+                            "Reunião com o patrão via google meet",
+                            "A reunião parece que não vai ser muito longa então após dela ainda posso fazer outras coisas...",
+                            DateTime(2023, 02, 2),
+                            DateTime(2023, 03, 20),
+                            "Maria",
+                            true
+                  ),
+            ];
+
+
+        @override
+        State<ActivityList> createState() => ActivityListState();
+}
+
+
+
+
+
+class ActivityListState extends State<ActivityList>{
+
+      // essa funcao vai ser passada para o construtor da classe "FavoritesActivities"
+      void changeListFunc( List<Activity> atividades ){
+              super.setState(() {
+                      super.widget.listActivities = atividades;
+              });
+      }
+
+      void _changeFavoriteType( int position, Activity atv ){
+            super.setState(() {
+                      super.widget.listActivities.elementAt(position).isFavorite = !atv.isFavorite;
+            });
+      }
 
 
       @override
@@ -86,11 +110,17 @@ class ActivityList extends StatelessWidget{
                                             padding: EdgeInsets.all(20.0),
                                             child: ListView.builder(
                                                //     padding: EdgeInsets.all(20.0),
-                                                    itemCount: this._listActivities.length,
+                                                    itemCount: super.widget.listActivities.length,
                                                     itemBuilder: (BuildContext ctx, int position){
                                                               return Column(
                                                                   children: [
                                                                         ListTile(
+                                                                                onTap: (){
+                                                                                        this._changeFavoriteType(
+                                                                                                    position,
+                                                                                                    super.widget.listActivities.elementAt(position)
+                                                                                        );
+                                                                                },
                                                                                 contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20.0),
                                                                                 tileColor: const Color.fromARGB(175, 87,  5,  110),
                                                                                 shape:  const RoundedRectangleBorder(
@@ -100,12 +130,12 @@ class ActivityList extends StatelessWidget{
                                                                                 title:  Padding( // espaco para distanciar title de subtittle
                                                                                               padding: EdgeInsets.only(bottom: 8.5),
                                                                                               child: Text(
-                                                                                                    this._listActivities[position].title,
+                                                                                                    super.widget.listActivities[position].title,
                                                                                                     style: TextStyle( fontSize: 20.0, color: Colors.white),
                                                                                            ),
                                                                                 ),
                                                                                 subtitle:  Text(
-                                                                                            this._listActivities[position].description ?? "<Não definido>",
+                                                                                            super.widget.listActivities[position].description ?? "<Não definido>",
                                                                                             maxLines: 3,
                                                                                             style: const TextStyle(
                                                                                                       fontSize: 12,
@@ -114,7 +144,7 @@ class ActivityList extends StatelessWidget{
                                                                                             ),
                                                                                 ),
                                                                                 trailing: Icon(
-                                                                                            this._listActivities[position].isComplete ?
+                                                                                             super.widget.listActivities[position].isFavorite ?
                                                                                                         Icons.star  :
                                                                                                         Icons.star_border_outlined
                                                                                             , color: Colors.yellow,
@@ -136,9 +166,12 @@ class ActivityList extends StatelessWidget{
 
                                     onTap: (int pos){
                                           if (pos != 0) {
-                                                  Navigator.push( context,  MaterialPageRoute(
-                                                               builder: ( BuildContext newContext) => FavoriteActivities( this._listActivities )
-                                                        )
+                                                  Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                     builder: ( BuildContext newContext) =>
+                                                                                FavoriteActivities( super.widget.listActivities, this.changeListFunc )
+                                                              )
                                                   );
                                           }
                                     },

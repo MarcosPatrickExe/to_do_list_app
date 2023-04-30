@@ -5,11 +5,27 @@ import '../components/FavoriteActivityCard.dart';
 
 
 
-class FavoriteActivities extends StatelessWidget {
+class FavoriteActivities extends StatefulWidget {
+
+        late List<Activity> activitiesList;
+        late Function changeList;
+        FavoriteActivities(this.activitiesList, this.changeList, {super.key});
+
+        @override
+        State<FavoriteActivities> createState() => FavoriteActivitiesState( );
+}
 
 
-      final List<Activity> _activitiesList;
-      FavoriteActivities( this._activitiesList );
+
+
+class FavoriteActivitiesState extends State<FavoriteActivities>{
+
+      void removeFavoriteItemList( Activity atividade  ){
+            super.setState(() {
+                     super.widget.activitiesList.remove( atividade);
+                     super.widget.changeList( super.widget.activitiesList ) ;
+            });
+      }
 
 
       @override
@@ -37,19 +53,19 @@ class FavoriteActivities extends StatelessWidget {
                                                   borderRadius: BorderRadius.all( Radius.circular(25.0)),
                                         ),
                                         padding: EdgeInsets.all(20.0),
-                                        child:   this._activitiesList.isEmpty
+                                        child:  super.widget.activitiesList.every( (Activity act) => act.isFavorite==false  )
                                               ?  const ListTile(
-                                                        contentPadding: EdgeInsets.only(left: 40),
+                                                        contentPadding: EdgeInsets.only(left: 30),
                                                         leading: Icon( Icons.star, size: 30, color: Color.fromARGB(255, 120, 120, 120), ),
-                                                        title: Text( "Ainda não há atividades com alta prioridade", style: TextStyle(fontSize: 15.0, color: Color.fromARGB(155, 255, 255, 255) ), ),
+                                                        title: Text( "Ainda não há atividade(s) marcada(s) como favoritas...", style: TextStyle(fontSize: 15.0, color: Color.fromARGB(155, 255, 255, 255) ), ),
                                               )
                                               : ListView.builder(
-                                                        itemCount: this._activitiesList.length,
+                                                        itemCount: super.widget.activitiesList.length,
                                                         itemBuilder: (BuildContext bcontxt, int index){
 
-                                                              if (this._activitiesList[index].isComplete ) {
+                                                              if ( super.widget.activitiesList[index].isFavorite ) {
                                                                       return FavoriteActivityCard(
-                                                                                 favoriteActivity: this._activitiesList[index]
+                                                                                 favoriteActivity:  super.widget.activitiesList[index]
                                                                       );
                                                               }
                                                               return  SizedBox(); // deve-se retornar qualquer classe

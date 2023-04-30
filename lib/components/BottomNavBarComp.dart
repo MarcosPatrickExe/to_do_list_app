@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list/pages/ActivityList.dart';
 import '../pages/Users.dart';
 import '../pages/Signup.dart';
 import '../pages/Home.dart';
@@ -32,26 +33,34 @@ class BottomNavBarComp extends StatelessWidget {
                           switch( index ){
                                 case 0:
                                          Navigator.push(
-                                              buildContext,
-                                              MaterialPageRoute( builder: (BuildContext bc) =>  const Home( title: 'Home Incrementor' ) )
+                                                  buildContext,
+                                                  MaterialPageRoute( builder: (BuildContext bc) =>  const Home( title: 'Home Incrementor' ) )
                                          );
                                         break;
+                                case 1:
+                                          Navigator.push(
+                                                  buildContext,
+                                                  MaterialPageRoute( builder: (BuildContext bc) =>  ActivityList() )
+                                          );
+                                          break;
+                          /*
                                 case 1:
                                         Navigator.push(
                                                 buildContext,
                                                 MaterialPageRoute( builder: (BuildContext bc) => const Signup() )
                                         );
                                       break;
+
                                 case 2:
                                         Navigator.push(
                                                 buildContext,
                                                 MaterialPageRoute(builder: (BuildContext bc) => Community()),
                                        );
-                                       break;
-                                case 3:
+                                       break; */
+                                case 2:
                                         Navigator.push(
-                                                buildContext,
-                                                MaterialPageRoute(builder: (BuildContext bc) => const Users()),
+                                                    buildContext,
+                                                    MaterialPageRoute(builder: (BuildContext bc) => const Users()),
                                         );
                                         break;
                           }
@@ -65,14 +74,18 @@ class BottomNavBarComp extends StatelessWidget {
                                 onTap: _onTapItem,
                                 currentIndex: index,
                                 showUnselectedLabels: true,
+                                backgroundColor:  Colors.deepPurple,
 
                                 items: const <BottomNavigationBarItem>[
                                         BottomNavigationBarItem(
                                                 label: "Home",
-                                                icon: Icon( Icons.numbers ),
-                                                backgroundColor:  Colors.deepPurple,
+                                                icon: Icon( Icons.home ),
                                         ),
                                         BottomNavigationBarItem(
+                                                label: "My activities",
+                                                icon: Icon( Icons.task ),
+                                        ),
+                           /*           BottomNavigationBarItem(
                                                 label: "Signup",
                                                 icon: Icon( Icons.login ),
                                                 backgroundColor:  Colors.deepPurple,
@@ -81,11 +94,10 @@ class BottomNavBarComp extends StatelessWidget {
                                                 label: "Community",
                                                 icon: Icon( Icons.person_sharp ),
                                                 backgroundColor:  Colors.deepPurple,
-                                        ),
+                                        ),  */
                                         BottomNavigationBarItem(
                                                 label: 'Users',
                                                 icon: Icon( Icons.verified_user_sharp ),
-                                                backgroundColor:  Colors.deepPurple,
                                         ),
                                 ],
                 );
