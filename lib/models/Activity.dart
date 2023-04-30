@@ -1,7 +1,7 @@
 import 'Member.dart';
 
 
-class Activity{
+class Activity {
       final String title;
       final String? description;
       final DateTime? dateRelease;

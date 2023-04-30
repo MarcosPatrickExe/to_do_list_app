@@ -17,7 +17,6 @@ class Signup extends StatelessWidget {
         const Signup( {super.key} );
 
 
-
         final  _fields =  const <Fields>[
                   Fields("username", "Enter your username", Icon( Icons.verified_user_rounded), TextInputType.text ),
                   Fields("email", "Enter your email", Icon( Icons.email), TextInputType.emailAddress ),
