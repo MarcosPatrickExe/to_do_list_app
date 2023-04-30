@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                               toolbarHeight: 50.2,
                               backgroundColor: Colors.deepPurple,
                               toolbarTextStyle: const TextStyle(
-                                  color:  Color.fromARGB( 1, 254, 0, 0)
+                                      color:  Color.fromARGB( 1, 254, 0, 0)
                               ),
                               title:  Text( super.widget.title ),   // o "widget" eh uma propriedade exclusiva da classe State e a propriedade "title" foi adquirida atraves do State<MyHomePage>
                       ),
@@ -62,13 +62,13 @@ class _HomeState extends State<Home> {
                                                 style: TextStyle( color: Colors.white),
                                         ),
                                         Text(
-                                              'número atual $_counter',
-                                              style: const TextStyle( color: Colors.white, fontSize: 40.1),
-                                              // style: Theme.of(context).textTheme.headlineMedium,
+                                                'número atual $_counter',
+                                                style: const TextStyle( color: Colors.white, fontSize: 40.1),
+                                                // style: Theme.of(context).textTheme.headlineMedium,
                                         ),
                                         Text(
-                                              'Nome do titulo da classe StatefullWidget:  ${super.widget.title} ',
-                                              style: const TextStyle( color: Colors.white, fontSize: 10.0),
+                                                'Nome do titulo da classe StatefullWidget:  ${super.widget.title} ',
+                                                style: const TextStyle( color: Colors.white, fontSize: 10.0),
                                         ),
                                   ],
                             ),

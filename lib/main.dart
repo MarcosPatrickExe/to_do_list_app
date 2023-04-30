@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/Signup.dart';
-
+import 'pages/ActivityList.dart';
 
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
                                     primarySwatch: null ,//Colors.orange,
                                     secondaryHeaderColor:  null, //Colors.black
                             ),
-                            home: const Signup(), // title: "Incrementador"
+                            home:  ActivityList(), // title: "Incrementador"
                   );
           }
 }

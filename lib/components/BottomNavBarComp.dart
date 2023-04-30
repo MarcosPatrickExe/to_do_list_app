@@ -73,7 +73,7 @@ class BottomNavBarComp extends StatelessWidget {
                                                 backgroundColor:  Colors.deepPurple,
                                         ),
                                         BottomNavigationBarItem(
-                                                label: "Login",
+                                                label: "Signup",
                                                 icon: Icon( Icons.login ),
                                                 backgroundColor:  Colors.deepPurple,
                                         ),

@@ -4,17 +4,18 @@ import '../components/BottomNavBarComp.dart';
 
 
 class Fields {
-      final String? labelText;
-      final String? hintText;
-      final Icon? iconnn;
-      final TextInputType? inputType;
+        final String? labelText;
+        final String? hintText;
+        final Icon? iconnn;
+        final TextInputType? inputType;
 
-      const Fields(this.labelText, this.hintText, this.iconnn, this.inputType);
+        const Fields(this.labelText, this.hintText, this.iconnn, this.inputType);
 }
 
 
 class Signup extends StatelessWidget {
         const Signup( {super.key} );
+
 
 
         final  _fields =  const <Fields>[
@@ -67,7 +68,8 @@ class Signup extends StatelessWidget {
                                   title:  Row(
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: const <Widget>[
-                                                     Text("Login" ),
+                                                     Text("Sign up" ),
+                                                     SizedBox( width: 10.0,),
                                                      Icon(  Icons.login ),
                                           ],
                                   ),
@@ -75,57 +77,75 @@ class Signup extends StatelessWidget {
                                   toolbarHeight: 50.2,
                                   backgroundColor: Colors.deepPurple,
                         ),
-                        body:  Center(
-                            child:
-                                Container(
-                                      padding: const EdgeInsets.all(20.0),
-                                      decoration: const   BoxDecoration(
-                                                color:  Color.fromARGB(80, 26, 0, 51),
-                                                borderRadius: BorderRadius.all( Radius.circular(30.0) )
-                                      ),
-                                      constraints:  BoxConstraints(
-                                       //         minWidth: 110.0,
-                                        //        minHeight: 210.0,
-                                                maxHeight:   MediaQuery.of(context).size.height *0.8,
-                                                maxWidth: MediaQuery.of(context).size.width *0.8,
-                                      ),
-                                      child:  Column(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                mainAxisSize: MainAxisSize.min,
-                                                children:   <Widget>[
-                                                        const Text(
-                                                                "Username",
-                                                                textAlign: TextAlign.center,
-                                                                style: TextStyle( color:   Color.fromARGB(200, 255, 255, 255) , fontSize: 24.0),
+                        body:
+                              Center(
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+
+                                      children: [
+                                          Container(
+                                                  padding: const EdgeInsets.all(20.0),
+                                                  decoration: const   BoxDecoration(
+                                                            color:  Color.fromARGB(80, 26, 0, 51),
+                                                            borderRadius: BorderRadius.all( Radius.circular(30.0) )
+                                                  ),
+                                                  constraints:  BoxConstraints(
+                                                   //         minWidth: 110.0,
+                                                    //        minHeight: 210.0,
+                                                            maxHeight:   MediaQuery.of(context).size.height *0.9,
+                                                            maxWidth: MediaQuery.of(context).size.width *0.8,
+                                                  ),
+                                                  child:  Column(
+                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                            mainAxisSize: MainAxisSize.min,
+                                                            children:   <Widget>[
+                                                                    const Text(
+                                                                            "Username",
+                                                                            textAlign: TextAlign.center,
+                                                                            style: TextStyle( color:   Color.fromARGB(200, 255, 255, 255) , fontSize: 24.0),
+                                                                    ),
+                                                                    const  SizedBox( height: 30.0 ),
+
+                                                                    this._fieldsFunc( this._fields[0] ),
+                                                                    const  SizedBox( height: 25.0 ),
+
+                                                                    this._fieldsFunc( this._fields[1] ),
+                                                                    const  SizedBox( height: 25.0 ),
+
+                                                                    this._fieldsFunc( this._fields[2] ),
+                                                                    const  SizedBox( height: 25.0 ),
+                                                            ]
+                                                  )
+                                          ),
+                                          const  SizedBox( height: 35.0 ),
+                                          Container(
+                                                  height: MediaQuery.of(context).size.height *0.085,
+                                                  width: MediaQuery.of(context).size.width *0.4,
+
+                                                  child: ElevatedButton(
+                                                        style: ElevatedButton.styleFrom(
+                                                                backgroundColor: Colors.deepPurple,
+                                                                shape: const  RoundedRectangleBorder(
+                                                                             borderRadius: BorderRadius.all( Radius.circular(20.0)),
+                                                                ),
                                                         ),
-                                                        const  SizedBox( height: 30.0 ),
-
-                                                        this._fieldsFunc( this._fields[0] ),
-                                                        const  SizedBox( height: 25.0 ),
-
-                                                        this._fieldsFunc( this._fields[1] ),
-                                                        const  SizedBox( height: 25.0 ),
-
-                                                        this._fieldsFunc( this._fields[2] ),
-                                                        const  SizedBox( height: 25.0 ),
-
-                                                        ElevatedButton(
-                                                                onPressed: (){},
-                                                                child: UnconstrainedBox  ( // wrap the content to define automatic width
-                                                                       child:  Row(
-                                                                                     mainAxisAlignment: MainAxisAlignment.center,
-                                                                                     children: const <Widget>[
-                                                                                             Icon( Icons.done ),
-                                                                                             Text("Cadastrar"),
-                                                                                     ]
-                                                                       ),
-                                                                )
+                                                        onPressed: (){},
+                                                        child: UnconstrainedBox ( // wrap the content to define automatic width
+                                                              child:  Row(
+                                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                                    children: const <Widget>[
+                                                                          Icon( Icons.done ),
+                                                                          SizedBox( width: 10.0 ),
+                                                                          Text("Cadastrar", style: TextStyle(fontSize: 20.0),),
+                                                                    ]
+                                                              ),
                                                         )
-                                                ]
-                                      )
-                                )
-                        ),
-                        bottomNavigationBar: const BottomNavBarComp( curentScreenIndex:  1),
+                                                  )
+                                          )
+                                        ]
+                                  ),
+                             ),
+                      //  bottomNavigationBar: const BottomNavBarComp( curentScreenIndex:  1),
                 );
         }
 }
