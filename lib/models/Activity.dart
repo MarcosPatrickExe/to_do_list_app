@@ -1,6 +1,7 @@
 import 'Member.dart';
 
 
+// classe de modelo que sera usada na lista
 class Activity {
        String title;
        String? description;
