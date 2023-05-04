@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;//converter/mapear  json em  objeto
 import 'dart:convert';
 
 
-
+// Aqui é feita uma requisição para uma API do github para recuperar alguns membros e assim montar a interface
 class Users extends StatefulWidget{
         const Users( {super.key} );
 
