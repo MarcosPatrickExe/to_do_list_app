@@ -15,7 +15,7 @@ class Home extends StatefulWidget {  // widget com estado mutavel
         // toda classe com propriedades final devem ter um construtor const !!
 
         @override
-        State<Home> createState() {   // retorno tbm pode ser do tipo "_MyHomePageState"
+        State<Home> createState() {   // retorno tbm pode ser do tipo "_MyHomePageState", vc escolhe
                   return _HomeState();// retornando a classe estado com interface do estado
         }
 }
