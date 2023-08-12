@@ -4,5 +4,5 @@ class Member {
         String login;
         String avatarUrl; // essa String só funciona caso o link da imagem esteja no formato padrão
 
-        Member( this.login, this.avatarUrl );
+        Member( this.login, this.avatarUrl ); // construtor modelo sem ser do tipo nomeado e nem do tipo posicional
 }
