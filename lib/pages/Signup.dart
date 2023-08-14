@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../components/BottomNavBarComp.dart';
 
 
-class Fields {
+class Fields {  // equivalente a uma interface
         final String? labelText;
         final String? hintText;
         final Icon? iconnn;
