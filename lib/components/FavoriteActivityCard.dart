@@ -8,8 +8,8 @@ import '../models/Activity.dart';
 class FavoriteActivityCard extends StatelessWidget{
 
       final Activity _activityReceived;
-      FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived =  favoriteActivity;
-
+      FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
+                                // parametro nomeado obrigatorio
 
       @override
       Widget build( BuildContext  favoriteActivitiesContext ){
