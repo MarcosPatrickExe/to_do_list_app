@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../components/BottomNavBarComp.dart';
-import '../models/Member.dart';
+import '../models/Member.dart'; // Member aqui atua como uma interface no TS
 import 'package:http/http.dart' as http;//converter/mapear  json em  objeto
 import 'dart:convert';
 
