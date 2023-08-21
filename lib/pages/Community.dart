@@ -4,8 +4,9 @@ import '../components/BottomNavBarComp.dart';
 
 // essa tela futuramente terá sua função alterada pois serviu somente para implementar algo básico como o layout da pagina
 class Community extends StatelessWidget {
-           Community( {super.key} );
+          Community( {super.key} );
 
+          // estilo-modelo para os ElevatedButtons
           final ButtonStyle allBtnStyles =  ElevatedButton.styleFrom(
                     minimumSize: const Size(100.0, 50.0),
                     maximumSize: const Size(200.0, 100.0),
