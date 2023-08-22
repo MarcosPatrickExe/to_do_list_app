@@ -52,7 +52,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                                                                 favoriteActivitiesContext // contexto que representa a classe-pai "FavoritiesAcitivitiesState"
                                                                                         .findAncestorStateOfType<FavoriteActivitiesState>()
                                                                                                 ?.removeFavoriteItemList( this._activityReceived ); // metodo da classe-pai "FavoritiesAcitivitiesState"
-                                                                        },
+                                                                        },                   // usando operador null-safety
                                                                 )
                                                           )
                                                  ]
