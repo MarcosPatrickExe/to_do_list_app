@@ -8,7 +8,7 @@ import 'dart:convert';
 
 // Aqui é feita uma requisição para uma API do github para recuperar alguns membros e assim montar a interface
 class Users extends StatefulWidget{
-        const Users( {super.key} );
+        const Users( {super.key} ); // construtor nomeado, enviando valor para a super-classe
 
         @override
         State<Users> createState() =>  UsersState();
