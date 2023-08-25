@@ -92,7 +92,7 @@ class UsersState extends State<Users>{
                                             maxHeight: MediaQuery.of(bc).size.height *0.8,
                                             maxWidth: MediaQuery.of(bc).size.width *0.9,
                                     ),
-                                    child: ListView.builder(
+                                    child: ListView.builder( //ListView com o builder que será carregada
                                             padding: const EdgeInsets.all(20.0),
                                             itemCount: this._members?.length,
                                             itemBuilder: (BuildContext bc, int position) => _buildRow(position)
