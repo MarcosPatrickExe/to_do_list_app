@@ -83,7 +83,7 @@ class UsersState extends State<Users>{
                       body:  Center(
                             child: Container(
                                     decoration: const  BoxDecoration(
-                                            color:  Color.fromARGB(80, 26, 0, 51),
+                                            color:  Color.fromARGB(80, 26, 0, 51), //metodo estatico 'fromARGB'
                                             borderRadius: BorderRadius.all( Radius.circular(10.0) )
                                     ),
                                     constraints:  BoxConstraints(
