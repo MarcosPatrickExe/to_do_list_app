@@ -32,7 +32,7 @@ class UsersState extends State<Users>{
                 String url = "https://api.github.com/orgs/adobe/members";
                 http.Response response =  await  http.get( Uri.parse(url) );
 
-                // passando esses dados para a UI thre+ad (a thread principal):
+                // passando esses dados para a UI thread (a thread principal):
                 super.setState( ()  {
                       //  this._members = jsonDecode( response.body);
                          var auxMembers = jsonDecode( response.body );
