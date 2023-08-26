@@ -7,7 +7,9 @@ import '../models/Activity.dart';
 
 class FavoriteActivityCard extends StatelessWidget{
 
+                  // por convecao, as propriedades privadas sao iniciadas com underline
       final Activity _activityReceived;
+      
       FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
                                 // parametro nomeado obrigatorio
 
