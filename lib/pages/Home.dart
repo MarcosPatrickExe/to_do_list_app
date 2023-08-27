@@ -80,14 +80,14 @@ class _HomeState extends State<Home> {
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children:   <Widget>[
                                             FloatingActionButton (
-                                                    onPressed:  this.incrementCounter,
+                                                    onPressed:  this.incrementCounter, // passando funcao que sera executada
                                                     // aqui o 'this' eh opcional
                                                     tooltip: 'Increment',
                                                     child:  const Icon(Icons.add),
                                             ),
                                             FloatingActionButton(
                                                     heroTag: UniqueKey(), // prevents the error:  "There are multiple heroes that share the same tag within a subtree."
-                                                    onPressed: () {
+                                                    onPressed: () { 
                                                             super.setState( ()=> {  _counter-- } );
                                                     },
                                                     backgroundColor: Colors.red,
