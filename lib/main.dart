@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
 
 
 /*
+// essa classe anteriormente era usada dento da classe principal "MyApp"
 class GiftApp extends StatelessWidget {
 
         @override
