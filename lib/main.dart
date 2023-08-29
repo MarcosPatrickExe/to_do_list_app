@@ -9,7 +9,7 @@ import 'pages/Home.dart';
 
 
 void main() {
-         runApp(   const MyApp()  ); // antes: const MyApp()
+         runApp( const MyApp() );
 }
 
 
@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
 }
 
 
-
-/*class Elements {
+// aqui seria uma interface para elementos com 2 propriedades opcionais
+/* class Elements {
         Elements( {this.body, this.footerBottoms } );
 
         Widget?  body = null;
