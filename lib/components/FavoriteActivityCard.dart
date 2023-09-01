@@ -36,7 +36,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                                             width: 210,
                                                             child: Text( this._activityReceived.title, style: TextStyle( fontSize: 20.0, color: Colors.white), ),
                                                       ),
-                                                      SizedBox( height: 10.0, ),
+                                                      SizedBox( height: 10.0, ), // SizedBox foi colocada para dar espacamento
                                                       Container(
                                                              width: 210.0,
                                                              child: Text( this._activityReceived.description ?? "" ,  maxLines: 2, style: TextStyle( fontSize: 12.0, color: Colors.white54, ), ),
