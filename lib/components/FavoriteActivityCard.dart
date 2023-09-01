@@ -50,7 +50,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                                                 child: ListTile(
                                                                         title: Text("Remover tarefa"),
                                                                         onTap: (){
-                                                                                Navigator.pop( bc ); //volta para a tela anterior
+                                                                                Navigator.pop( bc ); //Volta para a tela anterior de acordo com o BuildContext ou "bc" recebido
                                                                                 favoriteActivitiesContext // contexto que representa a classe-pai "FavoritiesAcitivitiesState"
                                                                                         .findAncestorStateOfType<FavoriteActivitiesState>()
                                                                                                 ?.removeFavoriteItemList( this._activityReceived ); // metodo da classe-pai "FavoritiesAcitivitiesState"
