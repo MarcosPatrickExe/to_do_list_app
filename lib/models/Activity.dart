@@ -1,5 +1,5 @@
 import 'Member.dart';
-// import basico
+// import basico do Member
 
 // classe de modelo que sera usada na lista
 class Activity {
