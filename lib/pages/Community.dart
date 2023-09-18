@@ -28,6 +28,7 @@ class Community extends StatelessWidget {
                                 child: Column(
                                         mainAxisAlignment:  MainAxisAlignment.spaceAround,
                                         children:   <Widget>[
+                                               // menu de opcoes
                                                ElevatedButton(
                                                       style: this.allBtnStyles,
                                                       onPressed: () { },
