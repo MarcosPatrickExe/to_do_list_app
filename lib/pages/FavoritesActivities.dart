@@ -7,6 +7,7 @@ import '../components/FavoriteActivityCard.dart';
 // aqui ainda nao foi implementado o gerenciamento de estado com Bloc e Provider
 class FavoriteActivities extends StatefulWidget {
 
+        // propriedades que serao inicializadas mais tarde na clsse 'FavoriteActivityState'
         late List<Activity> activitiesList;
         late Function changeList;
         FavoriteActivities(this.activitiesList, this.changeList, {super.key});
