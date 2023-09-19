@@ -89,7 +89,7 @@ class UsersState extends State<Users>{
                                     constraints:  BoxConstraints(
                                             minWidth: 110.0,
                                             minHeight: 210.0,
-                                            maxHeight: MediaQuery.of(bc).size.height *0.8,
+                                            maxHeight: MediaQuery.of(bc).size.height *0.8, // 'MediaQuery.of(...)' retorna a altura da tela do dispositivo
                                             maxWidth: MediaQuery.of(bc).size.width *0.9,
                                     ),
                                     child: ListView.builder( //ListView com o builder que será carregada
