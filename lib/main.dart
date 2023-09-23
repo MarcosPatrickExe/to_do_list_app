@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 }
 
 
-// aqui seria uma interface para elementos com 2 propriedades opcionais
+// aqui seria uma interface para elementos com duas propriedades opcionais
 /* class Elements {
         Elements( {this.body, this.footerBottoms } );
 
