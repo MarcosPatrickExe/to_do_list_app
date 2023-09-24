@@ -61,6 +61,7 @@ class ActivityList extends StatefulWidget {
 
         @override
         State<ActivityList> createState() => ActivityListState();
+        // createState eh um callback que retorna uma instancia da classe State<T>
 }
 
 
