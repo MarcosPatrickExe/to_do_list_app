@@ -7,6 +7,7 @@ import '../pages/FavoritesActivities.dart';
 
 class ActivityList extends StatefulWidget {
 
+            // inserindo dados manualmente para teste
             var listActivities = <Activity>[
                   Activity(
                             "Comprar a ração dos gatos",
