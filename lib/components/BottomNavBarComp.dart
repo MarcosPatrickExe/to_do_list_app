@@ -11,7 +11,7 @@ class BottomNavBarComp extends StatelessWidget {
         const BottomNavBarComp(  { super.key, required this.curentScreenIndex } );
 
         //  const BottomNavBarComp(
-        //            final Key? keyreceived,  // AQUI O 'keyreceived' eh obrigatorio e eh enviado para o  super-construtor nomeado via ":super(key: keyreceived)"
+        //            final Key? keyreceived,  // AQUI O 'keyreceived' eh obrigatorio, mas pode ser null, e eh enviado para o  super-construtor nomeado via ":super(key: keyreceived)"
         //            this.curentScreenIndex
         //  ): super(key: keyreceived );
 
