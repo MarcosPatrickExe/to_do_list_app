@@ -43,6 +43,8 @@ class BottomNavBarComp extends StatelessWidget {
                                                   MaterialPageRoute( builder: (BuildContext bc) =>  ActivityList() )
                                           );
                                           break;
+
+                         // comentando os botoes abaixo, pois serao usados posteriormente
                           /*
                                 case 1:
                                         Navigator.push(
