@@ -87,6 +87,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                                                 label: "My activities",
                                                 icon: Icon( Icons.task ),
                                         ),
+                                        // comentando 2 botoes, uma vez que deixam a BottomNavigationBar bastante comprimida
                            /*           BottomNavigationBarItem(
                                                 label: "Signup",
                                                 icon: Icon( Icons.login ),
