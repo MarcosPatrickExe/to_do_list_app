@@ -7,7 +7,7 @@ import '../pages/Community.dart';
 
 
 // classe sem estado, apenas com foco no visual
-class BottomNavBarComp extends StatelessWidget {
+class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obrigatorio aqui
         const BottomNavBarComp(  { super.key, required this.curentScreenIndex } );
 
         //  const BottomNavBarComp(
