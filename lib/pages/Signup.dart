@@ -7,7 +7,8 @@ class Fields {  // equivalente a uma interface
         final String? labelText;
         final String? hintText;
         final Icon? iconnn;
-        final TextInputType? inputType;
+        final TextInputType? inputType; 
+        // todos os campos 'final' inicialmente podem ser nulos, por isso o '?'
 
         const Fields(this.labelText, this.hintText, this.iconnn, this.inputType);
 }
