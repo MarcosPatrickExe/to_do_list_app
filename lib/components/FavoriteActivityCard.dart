@@ -30,7 +30,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                           const Icon( Icons.star, size: 30, color: Colors.amber, ),
                                           SizedBox( width: 20.0, ),
                                           Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.start, //alinhamento vertical
                                                 children: [
                                                       Container(
                                                             width: 210,
