@@ -16,7 +16,7 @@ class FavoriteActivityCard extends StatelessWidget{
       @override
       Widget build( BuildContext  favoriteActivitiesContext ){
             return Card(
-                      margin: const EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.all(10.0), // edge insets quer dizer que sera aplicado em todos os vertices 
                       color: const Color.fromARGB(175, 87,  5,  110),
                       shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.all( Radius.circular(20.0) )
