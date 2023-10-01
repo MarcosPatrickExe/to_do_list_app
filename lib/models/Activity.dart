@@ -1,7 +1,7 @@
 import 'Member.dart';
 // import basico do Member
 
-// classe de modelo que sera usada na lista
+// classe de modelo para o armazenamento das atividades que serao usadas na lista
 class Activity {
        String title;
        String? description; // dado opcional, podendo receber valor nulo
