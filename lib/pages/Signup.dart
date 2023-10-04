@@ -24,7 +24,7 @@ class Signup extends StatelessWidget {
                   Fields("password", "Enter your password", Icon( Icons.password), TextInputType.number ),
         ];
 
-
+        // funcao privada
         TextFormField _fieldsFunc (Fields field){ // campos de username, email e senha
               return TextFormField (
                       maxLines: 1,
