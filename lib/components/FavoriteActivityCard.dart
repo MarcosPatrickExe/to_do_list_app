@@ -4,7 +4,7 @@ import 'package:to_do_list/pages/FavoritesActivities.dart';
 import '../models/Activity.dart';
 
 
-
+// classe sem estado pq servira de modelo de Card para exibicao das informacoes
 class FavoriteActivityCard extends StatelessWidget{
 
                   // por convecao, as propriedades privadas sao iniciadas com underline
