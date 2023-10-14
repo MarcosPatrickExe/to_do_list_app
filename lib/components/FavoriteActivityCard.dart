@@ -7,11 +7,11 @@ import '../models/Activity.dart';
 // classe sem estado pq servira de modelo de Card para exibicao das informacoes
 class FavoriteActivityCard extends StatelessWidget{
 
-                  // por convecao, as propriedades privadas sao iniciadas com underline
+                  // por convencao, as propriedades privadas sao iniciadas com underline
       final Activity _activityReceived;
       
       FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
-                                // parametro nomeado obrigatorio
+                                // parametro nomeado e obrigatorio
 
       @override
       Widget build( BuildContext  favoriteActivitiesContext ){
@@ -25,7 +25,7 @@ class FavoriteActivityCard extends StatelessWidget{
                         //   height: 20.0,
                            padding: EdgeInsets.all(10.0),
                            child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly, // colocando espaco entre elementos
                                   children: [
                                           const Icon( Icons.star, size: 30, color: Colors.amber, ),
                                           SizedBox( width: 20.0, ),
