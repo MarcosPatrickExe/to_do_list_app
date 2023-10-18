@@ -18,7 +18,7 @@ class FavoriteActivities extends StatefulWidget {
 
 
 
-
+// classe para inserir o state-full widget
 class FavoriteActivitiesState extends State<FavoriteActivities>{
 
       void removeFavoriteItemList( Activity atividade  ){
