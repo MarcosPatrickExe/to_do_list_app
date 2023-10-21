@@ -38,7 +38,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                                 case 0:
                                          Navigator.push(
                                                   buildContext,
-                                                  MaterialPageRoute( builder: (BuildContext bc) =>  const Home( title: 'Home Incrementor' ) )
+                                                  MaterialPageRoute( builder: (BuildContext bc) =>  const Home( title: 'Home Incrementor' ) ) // chamando a nova pagina Widget e passando o parametro
                                          );
                                         break;
                                 case 1:
