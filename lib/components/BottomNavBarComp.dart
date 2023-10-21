@@ -32,6 +32,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                 dynamic index = this.curentScreenIndex;
                 print('current screen is:  $index'  );
 
+                // criando metodo privado sem retorno
                 void  _onTapItem( int index ){
                           switch( index ){
                                 case 0:
