@@ -30,7 +30,7 @@ class UsersState extends State<Users>{
 
         void _loadData() async {  // funcoes assincronas sao disparadas por outro processo ao inves da thread principal, nao interferindo na renderizacao da UI
                 String url = "https://api.github.com/orgs/adobe/members";
-                http.Response response =  await  http.get( Uri.parse(url) );
+                http.Response response =  await  http.get( Uri.parse(url) ); // o 'await' automaticamente faz com que a funcao '_loadData()' espera até receber a resposta da requisicao 
 
                 // passando esses dados para a UI thread (a thread principal):
                 super.setState( ()  {
