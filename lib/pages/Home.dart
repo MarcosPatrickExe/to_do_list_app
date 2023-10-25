@@ -26,6 +26,7 @@ class Home extends StatefulWidget {  // widget com estado mutavel
 class _HomeState extends State<Home> {
         int _counter = 0; // variavel pertecente a interface (build()) do State
         static dynamic _itemIndexSelect = 0;
+        // a declaracao 'dynamic' define que a variavel tem um tipo dinamico, ou que pode ser de qualquer tipo
 
         //  static final List<IScenes> pages = [MyHomePage(title: 'Incrementor',), LoremIpsum(), Options() ];
 
