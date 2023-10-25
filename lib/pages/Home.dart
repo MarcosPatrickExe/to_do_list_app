@@ -90,6 +90,7 @@ class _HomeState extends State<Home> {
                                                     heroTag: UniqueKey(), // prevents the error:  "There are multiple heroes that share the same tag within a subtree."
                                                     onPressed: () { 
                                                             super.setState( ()=> {  _counter-- } );
+                                                            // alterando o estado manualmente sem usar libraries do flutter
                                                     },
                                                     backgroundColor: Colors.red,
                                                     child:  const Icon(Icons.minimize),
