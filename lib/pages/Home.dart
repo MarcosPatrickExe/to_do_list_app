@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                                                 'Voce apertou o botao N vezes: ',
                                                 style: TextStyle( color: Colors.white),
                                         ),
-                                        Text(
+                                        Text(    // realizando a interpolacao dentro da propria string abaixo
                                                 'número atual $_counter',
                                                 style: const TextStyle( color: Colors.white, fontSize: 40.1),
                                                 // style: Theme.of(context).textTheme.headlineMedium,
