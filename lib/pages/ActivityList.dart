@@ -121,6 +121,7 @@ class ActivityListState extends State<ActivityList>{
                                                                                         this._changeFavoriteType(
                                                                                                     position,
                                                                                                     super.widget.listActivities.elementAt(position)
+                                                                                                    // a propriedade "widget" faz referencia a super classe State<ActivityList>
                                                                                         );
                                                                                 },
                                                                                 contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20.0),
