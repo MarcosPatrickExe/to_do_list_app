@@ -169,6 +169,7 @@ class ActivityListState extends State<ActivityList>{
 
                                     onTap: (int pos){
                                           if (pos != 0) {
+                                                 // o "push" eh responsavel por chamar a nova activity que, nesse caso, eh a FavoriteActivities
                                                   Navigator.push(
                                                               context,
                                                               MaterialPageRoute(
