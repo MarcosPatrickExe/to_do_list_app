@@ -4,7 +4,7 @@ import '../models/Activity.dart';
 import '../pages/FavoritesActivities.dart';
 
 
-
+                        // inserindo statuful
 class ActivityList extends StatefulWidget {
 
             // inserindo modelos de dados, de modo manual, para teste
