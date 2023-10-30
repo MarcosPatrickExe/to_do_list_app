@@ -9,7 +9,7 @@ class FavoriteActivityCard extends StatelessWidget{
 
                   // por convencao, as propriedades privadas sao iniciadas com underline, como no python
       final Activity _activityReceived;
-      // com o "final" a propriedade pode ser declarada sem necessariamente precisar ser inicializada
+      // com o "final" a propriedade pode ser declarada sem necessariamente precisar ser inicializada, diferente do 'const' que precisa ser inicializada no momento da declaracao
       
       FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
                                 // declarando o parametro 'favoriteActivity' que eh nomeado e obrigatorio, e atribuido a variavel privada '_activityReceived'
