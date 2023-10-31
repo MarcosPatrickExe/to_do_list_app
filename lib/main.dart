@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           const MyApp({super.key}); // construtores "const" sao opcionais !!
 
           @override
-          Widget build ( BuildContext context ) {
+          Widget build ( BuildContext context ) { // todo metodo 'build' recebe um contexto da sua super-classe, no caso, a "StatelessWidget"
                   return MaterialApp(
                             title: 'Demo app',
                             theme: ThemeData(
