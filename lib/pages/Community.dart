@@ -14,11 +14,11 @@ class Community extends StatelessWidget {
                     textStyle: const TextStyle( fontSize: 20.0,  ),
           );
 
-          @override
+          @override     //
           Widget build( BuildContext bc ){
                   return Scaffold(
                             backgroundColor: const Color.fromARGB(255, 55, 3, 69),
-                            appBar: AppBar(
+                            appBar: AppBar( // appBar eh a barra do topo que aparece em todas as telas
                                   title: const Text("Options"),
                                   centerTitle: true,
                                   toolbarHeight: 50.2,
