@@ -26,7 +26,7 @@ class Community extends StatelessWidget {
                             ),
                            body:  Center(
                                 child: Column(
-                                        mainAxisAlignment:  MainAxisAlignment.spaceAround,
+                                        mainAxisAlignment:  MainAxisAlignment.spaceAround, // definindo botoes centrais verticalmente
                                         children:   <Widget>[
                                                // menu de opcoes
                                                ElevatedButton(
