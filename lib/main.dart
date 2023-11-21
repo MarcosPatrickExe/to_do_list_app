@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           Widget build ( BuildContext context ) { // todo metodo 'build' recebe um contexto da sua super-classe, no caso, a "StatelessWidget"
                   return MaterialApp(
                             title: 'Demo app',
-                            theme: ThemeData(
+                            theme: ThemeData(  // campos podem nulos
                                     primarySwatch: null ,//Colors.orange,
                                     secondaryHeaderColor:  null, //Colors.black
                             ),
