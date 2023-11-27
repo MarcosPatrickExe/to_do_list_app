@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'pages/Signup.dart';
 import 'pages/ActivityList.dart';
 import 'pages/Home.dart';
+// export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
+// export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
+// export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
 
-// export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
-// export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
-// export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
 
 // metodo principal
 void main() {
