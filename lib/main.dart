@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
 
 
 /*
-// essa classe anteriormente era usada dento da classe principal "MyApp" por padrao do Flutter
+// essa classe anteriormente era usada dento da classe principal "MyApp" por padrao ao criar projeto Flutter
 class GiftApp extends StatelessWidget {
 
         @override
