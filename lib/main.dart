@@ -14,7 +14,7 @@ void main() {
 }
 
 
-// classe com construtor const  q inicialmente eh usada pelo "runApp()"
+// classe com construtor const que inicialmente eh usada pelo "runApp()"
 class MyApp extends StatelessWidget {
           const MyApp({super.key}); // construtores "const" sao opcionais !!
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
                                     primarySwatch: null ,//Colors.orange,
                                     secondaryHeaderColor:  null, //Colors.black
                             ),
-                            home: const  Home(title: "Incrementador"),
+                            home: const  Home( title: "Incrementador"),
                   );
           }// closed build method
 }
