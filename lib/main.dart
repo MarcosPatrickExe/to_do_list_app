@@ -10,7 +10,7 @@ import 'pages/Home.dart';
 // metodo principal
 void main() {
          runApp( const MyApp() );
-         // 'runApp' eh um metodo declarado na super-classe que recebe qualquer objeto Widget
+         // 'runApp' eh um metodo declarado na super-classe que recebe qualquer objeto Widget, ou que estende ele
 }
 
 
