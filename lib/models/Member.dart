@@ -5,5 +5,5 @@ class Member {
         String avatarUrl; // essa String só funciona caso o link da imagem esteja no formato padrão, ou seja, no formato HTTP
 
         // espaco para separar o construtor do restante das propriedades
-        Member( this.login, this.avatarUrl ); // construtor simples sem ser do tipo nomeado e nem do tipo posicional
+        Member( this.login, this.avatarUrl ); // construtor do tipo nomeado e nem do tipo posicional
 }
