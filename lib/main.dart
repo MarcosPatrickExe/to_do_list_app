@@ -57,10 +57,10 @@ class GiftApp extends StatelessWidget {
                                       title: Text("Hello from demo!!"),
                                 ),
                         ),
-                      theme: ThemeData(  // o new eh opcional
-                           primarySwatch: Colors.indigo,
-                           visualDensity: VisualDensity.adaptivePlatformDensity
-                      )
+                        theme: ThemeData(  // o new eh opcional
+                            primarySwatch: Colors.indigo,  // -> azul claro
+                            visualDensity: VisualDensity.adaptivePlatformDensity
+                        )
               );
               //  throw UnimplementedError();
         }
