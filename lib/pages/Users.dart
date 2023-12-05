@@ -11,7 +11,7 @@ class Users extends StatefulWidget{
         const Users( {super.key} ); // construtor nomeado, enviando valor para a super-classe
 
         @override
-        State<Users> createState() =>  UsersState();
+        State<Users> createState() =>  UsersState();// retornando a subclasse
 }
 
 
