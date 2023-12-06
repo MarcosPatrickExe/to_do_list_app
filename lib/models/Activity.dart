@@ -9,7 +9,7 @@ class Activity {
        DateTime reminderDate; // data-horario de lembrete. Esse ja nao eh opcional, eh obrigatorio
       // Member owner;
        String owner; // o nome do criador (ou owner) ja vai ser definido automaticamente atraves do login do usuario
-       bool isFavorite; 
+       bool isFavorite; // 'bool' é o único tipo primitivo
 
        Activity(this.title, this.description, this.dateRelease, this.reminderDate, this.owner, this.isFavorite);
        // construtor basico sem argumentos nomeados e posicionais
