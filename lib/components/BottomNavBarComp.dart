@@ -105,6 +105,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                                         BottomNavigationBarItem(
                                                 label: 'Users',
                                                 icon: Icon( Icons.verified_user_sharp ),
+                                                        // Icons are predefined!!
                                         ),
                                 ],
                 );
