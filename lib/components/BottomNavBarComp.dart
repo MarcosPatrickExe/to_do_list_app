@@ -31,6 +31,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                 // o 'dynamic' permite definir um tipo qualquer para a propriedade. Esse tipo eh equivalente ao 'any' do TypesSript
                 dynamic index = this.curentScreenIndex;
                 print('current screen is:  $index'  );
+                // print para teste
 
                 // criando metodo privado sem retorno
                 void  _onTapItem( int index ){
