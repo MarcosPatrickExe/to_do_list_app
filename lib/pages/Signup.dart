@@ -4,7 +4,7 @@ import '../components/BottomNavBarComp.dart';
 
 
 class Fields {  // equivalente a uma interface
-        final String? labelText;
+        final String? labelText; // usando o 'final' para todos os outros atributos
         final String? hintText;
         final Icon? iconnn;
         final TextInputType? inputType; 
