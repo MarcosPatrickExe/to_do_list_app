@@ -10,7 +10,7 @@ class Fields {  // equivalente a uma interface
         final TextInputType? inputType; 
         // todos os campos 'final' inicialmente podem ser nulos, por isso o '?'
 
-        const Fields(this.labelText, this.hintText, this.iconnn, this.inputType);
+        const Fields( this.labelText, this.hintText, this.iconnn, this.inputType );
 }
 
 // essa tela somente será acessada na tela de login como uma opção onde o usuário poderá clicar para se cadastrar
