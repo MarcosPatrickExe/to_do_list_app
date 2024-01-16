@@ -43,7 +43,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                                          );
                                         break;
                                 case 1:
-                                          Navigator.push(
+                                          Navigator.push(  // opcao 2
                                                   buildContext,
                                                   MaterialPageRoute( builder: (BuildContext bc) =>  ActivityList() )
                                           );
