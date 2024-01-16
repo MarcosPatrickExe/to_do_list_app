@@ -49,8 +49,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                                           );
                                           break;
 
-                         // comentando os botoes abaixo, pois serao usados posteriormente
-                          /*
+                         // comentando os botoes abaixo, pois serão usdos somente na outra etapa do projeto                          /*
                                 case 1:
                                         Navigator.push(
                                                 buildContext,
