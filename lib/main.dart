@@ -8,8 +8,6 @@ import 'pages/Home.dart';
 
 // aqui nesse arquivo 'main' futuramente pdera ser adicionado um BlocProvider
 
-
-
 void main() {
      runApp( const MyApp() );
     // 'runApp' eh um metodo declarado na super-classe que recebe qualquer objeto Widget, ou que estende ele
