@@ -24,7 +24,7 @@ class FavoriteActivityCard extends StatelessWidget{
                       ),
                       child: Container(
                         //   height: 20.0,
-                           padding: EdgeInsets.all(10.0),
+                           padding: EdgeInsets.all(10.0), // for all sides
                            child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly, // colocando espaco entre elementos
                                   children: [
