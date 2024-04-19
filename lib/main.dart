@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                                     primarySwatch: null ,//Colors.orange, nullable // -> cor anterior
                                     secondaryHeaderColor:  null, //Colors.black
                             ),
-                            home: const  Home( title: "Incrementador"),
+                            home: const Home( title: "Incrementador"),
                   );
           }// closed build method
 }
