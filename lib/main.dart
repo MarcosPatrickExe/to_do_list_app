@@ -6,7 +6,7 @@ import 'pages/Home.dart';
 // export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
 // export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
 
-// aqui nesse arquivo 'main' futuramente pdera ser adicionado um BlocProvider
+//aqui nesse arquivo 'main' futuramente pdera ser adicionado um BlocProvider
 
 void main() {
      runApp( const MyApp() );
