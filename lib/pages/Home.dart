@@ -77,6 +77,7 @@ class _HomeState extends State<Home> {
                       ),
 
 
+                      // rodape
                       persistentFooterButtons: <Widget>[
                               Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -101,7 +102,7 @@ class _HomeState extends State<Home> {
                       ],
 
                       bottomNavigationBar: const BottomNavBarComp( curentScreenIndex: 0 ),
-
+                      
               );
         }
 }
