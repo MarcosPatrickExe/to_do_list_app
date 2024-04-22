@@ -65,8 +65,8 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                                        break; */
                                 case 2:
                                         Navigator.push(
-                                                    buildContext,
-                                                    MaterialPageRoute(builder: (BuildContext bc) => const Users()),
+                                                buildContext,
+                                                MaterialPageRoute(builder: (BuildContext bc) => const Users()),
                                         );
                                         break;
                           }
