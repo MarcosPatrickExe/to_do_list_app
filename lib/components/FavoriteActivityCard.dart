@@ -21,7 +21,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                 borderRadius: BorderRadius.all( Radius.circular(20.0) ) // aplicando a borda redonda em todos os vertices (ou edges)
                       ),
                       child: Container(
-                        //   height: 20.0,
+                        //   height: 20.0,    //old default
                            padding: EdgeInsets.all(10.0), // for all sides
                            child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly, // colocando espaco entre elementos
