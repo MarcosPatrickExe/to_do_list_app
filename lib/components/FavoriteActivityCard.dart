@@ -48,7 +48,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                                           PopupMenuItem(
                                                                 child: ListTile(
                                                                         title: Text("Remover tarefa"),
-                                                                        onTap: (){
+                                                                        onTap: (){  // onClick
                                                                                 Navigator.pop( bc ); //Volta para a tela anterior de acordo com o BuildContext ou "bc" recebido
                                                                                 favoriteActivitiesContext // contexto que representa a classe-pai "FavoritiesAcitivitiesState"
                                                                                         .findAncestorStateOfType<FavoriteActivitiesState>()
