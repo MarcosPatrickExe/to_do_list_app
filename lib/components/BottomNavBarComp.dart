@@ -73,6 +73,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                 }
 
 
+                  // row of buttons
                 return BottomNavigationBar (
                                 unselectedItemColor: Colors.white,
                                 unselectedLabelStyle: const TextStyle(color: Colors.white), // cor da letra/label quando nao estiver selecionada
