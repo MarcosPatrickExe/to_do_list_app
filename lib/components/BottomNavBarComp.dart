@@ -33,7 +33,7 @@ class BottomNavBarComp extends StatelessWidget {  // 'currentScreenIndex' eh obr
                 print('current screen is:  $index'  );
                 // print para teste
 
-                // criando metodo privado sem retorno
+               
                 void  _onTapItem( int index ){
                           switch( index ){
                                 case 0:
