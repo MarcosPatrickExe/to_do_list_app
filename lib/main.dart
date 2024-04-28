@@ -18,7 +18,7 @@ void main() {
 
 // classe com construtor const que inicialmente eh usada pelo "runApp()"
 class MyApp extends StatelessWidget {
-          const MyApp({ super.key }); // construtores "const" sao opcionais !!
+          const MyApp( { super.key } ); // construtores "const" sao opcionais !!
 
          // the method below is callback function that is called by framework in runtime
           @override
