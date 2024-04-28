@@ -23,14 +23,14 @@ class MyApp extends StatelessWidget {
          // the method below is callback function that is called by framework in runtime
           @override
           Widget build ( BuildContext context ) { // todo metodo 'build' recebe um contexto da sua super-classe, no caso, a "StatelessWidget"
-                  return MaterialApp(
-                       title: 'Activity Schedule app',  
-                       theme: ThemeData(  // campos podem nulos
-                            primarySwatch: null ,//Colors.orange, nullable // -> cor anterior
-                            secondaryHeaderColor:  null, //Colors.black
-                       ),
-                       home: const Home( title: "Incrementador"),
-                  );
+               return MaterialApp(
+                   title: 'Activity Schedule app',  
+                   theme: ThemeData(  // campos podem nulos
+                       primarySwatch: null ,//Colors.orange, nullable // -> cor anterior
+                       secondaryHeaderColor:  null, //Colors.black
+                  ),
+                  home: const Home( title: "Incrementador"),
+              );
           }// closed build method
 }
 
