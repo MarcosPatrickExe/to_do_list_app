@@ -4,7 +4,6 @@ import 'package:to_do_list/pages/FavoritesActivities.dart';
 import '../models/Activity.dart';
 
 
-
 class FavoriteActivityCard extends StatelessWidget{
 
       final Activity _activityReceived;
