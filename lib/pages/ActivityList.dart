@@ -6,8 +6,9 @@ import '../pages/FavoritesActivities.dart';
 
                         // inserindo statuful widget (widget com estado)
 class ActivityList extends StatefulWidget {
-
-            // inserindo modelos de dados, de modo manual, para teste
+          
+  
+            // inserting a manual data for model of list view
             var listActivities = <Activity>[
                   Activity(
                             "Comprar a ração dos gatos",
