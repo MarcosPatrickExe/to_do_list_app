@@ -41,7 +41,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                                       ),
                                                ],
                                           ),
-                                          PopupMenuButton( // inserindo menu pop-up ou um dialog para a inserçao de uma caixa de dialogo que sobreponha a tela atual
+                                          PopupMenuButton( 
                                                   icon: Icon( Icons.more_vert, color: Colors.white70, size: 20, ),
                                                   itemBuilder: (BuildContext bc)=>[ // passando um callback para o builder (ou construtor)
                                                           PopupMenuItem(
