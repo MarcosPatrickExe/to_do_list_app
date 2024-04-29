@@ -17,7 +17,7 @@ class FavoriteActivityCard extends StatelessWidget{
                       margin: const EdgeInsets.all(10.0), // many paddings
                       color: const Color.fromARGB(175, 87,  5,  110),  
                       shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all( Radius.circular(20.0) ) // aplicando a borda redonda em todos os vertices (ou edges)
+                          borderRadius: BorderRadius.all( Radius.circular(20.0) ) // aplicando a borda redonda em todos os vertices (ou edges)
                       ),
                       child: Container(
                         //   height: 20.0,    //old default
