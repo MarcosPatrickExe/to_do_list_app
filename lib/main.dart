@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
                   ),
                   home: const Home( title: "Incrementador"),
               );
-          }// closed build method
+          }
 }
 
 
