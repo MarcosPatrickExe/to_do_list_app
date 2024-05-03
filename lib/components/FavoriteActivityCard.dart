@@ -11,7 +11,6 @@ class FavoriteActivityCard extends StatelessWidget{
       FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
                                 // declarando o parametro 'favoriteActivity' que eh nomeado e obrigatorio, e atribuido a variavel privada '_activityReceived'
 
-      
       @override
       Widget build( BuildContext  favoriteActivitiesContext ){
             return Card(
