@@ -9,8 +9,6 @@ void main() {
      runApp( const MyApp() );
 }
 
-
-// classe com construtor const que inicialmente eh usada pelo "runApp()"
 class MyApp extends StatelessWidget {
           const MyApp( { super.key } ); // construtores "const" sao opcionais !!
 
