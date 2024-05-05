@@ -5,8 +5,6 @@ import 'pages/Home.dart';
 // export 'pages/Home.dart'; // tentando exportar as classes / Widgets do app
 
 
-
-
 void main() {
      runApp( const MyApp() );
     // 'runApp' eh um metodo declarado na super-classe que recebe qualquer objeto Widget, ou que estende ele
