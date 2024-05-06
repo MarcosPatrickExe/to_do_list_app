@@ -8,10 +8,10 @@ class Community extends StatelessWidget {
 
           // estilo-modelo para os ElevatedButtons
           final ButtonStyle allBtnStyles =  ElevatedButton.styleFrom(
-                    minimumSize: const Size(100.0, 50.0), 
-                    maximumSize: const Size(200.0, 100.0),
-                    backgroundColor: const Color.fromARGB(255, 128, 0, 177),
-                    textStyle: const TextStyle( fontSize: 20.0,  ),
+               minimumSize: const Size(100.0, 50.0), 
+               maximumSize: const Size(200.0, 100.0),
+               backgroundColor: const Color.fromARGB(255, 128, 0, 177),
+               textStyle: const TextStyle( fontSize: 20.0,  ),
           );
 
           @override     //
