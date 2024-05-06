@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../components/BottomNavBarComp.dart';
 
 
-// essa tela futuramente terá sua função alterada pois serviu somente para implementar algo básico como o layout da pagina
+// this page will changed because it just provida a basic Dart code examples
 class Community extends StatelessWidget {
           Community( {super.key} );
 
