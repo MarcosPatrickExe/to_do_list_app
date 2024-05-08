@@ -49,6 +49,7 @@ class Community extends StatelessWidget {
                                                       onPressed: () {},
                                                       child: Text("About", style: TextStyle( color: Colors.white),  ),
                                               ),
+                                            // four examples
                                         ],
                                 )
                            ),
