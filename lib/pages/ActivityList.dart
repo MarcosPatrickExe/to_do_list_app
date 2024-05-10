@@ -105,8 +105,8 @@ class ActivityListState extends State<ActivityList>{
                                       child: Container( // retangulo escuro
                                             alignment: Alignment.center,
                                             decoration: const BoxDecoration(
-                                                      color: Color.fromARGB(20, 0, 0, 0),
-                                                      borderRadius: BorderRadius.all( Radius.circular(25.0)),
+                                                   color: Color.fromARGB(20, 0, 0, 0),
+                                                   borderRadius: BorderRadius.all( Radius.circular(25.0)),
                                             ),
                                             padding: EdgeInsets.all(20.0),
                                             child: ListView.builder(
