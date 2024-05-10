@@ -4,7 +4,7 @@ import '../models/Activity.dart';
 import '../pages/FavoritesActivities.dart';
 
 
-                        // inserindo statuful widget (widget com estado)
+                       
 class ActivityList extends StatefulWidget {
           
   
