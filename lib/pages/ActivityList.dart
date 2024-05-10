@@ -67,7 +67,6 @@ class ActivityList extends StatefulWidget {
 
 
 
-
 class ActivityListState extends State<ActivityList>{
 
       // essa funcao vai ser passada para o construtor da classe "FavoritesActivities"
