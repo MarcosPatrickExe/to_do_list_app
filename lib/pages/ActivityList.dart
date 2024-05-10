@@ -129,7 +129,7 @@ class ActivityListState extends State<ActivityList>{
                                                                                           borderRadius: BorderRadius.all( Radius.circular(10.0)  ),
                                                                                 ),
                                                                                 leading: Icon( Icons.note, color: Colors.white, size: 30.0),
-                                                                                title:  Padding( // espaco para distanciar title de subtittle
+                                                                                title:  Padding( 
                                                                                               padding: EdgeInsets.only(bottom: 8.5),
                                                                                               child: Text(
                                                                                                     super.widget.listActivities[position].title,
