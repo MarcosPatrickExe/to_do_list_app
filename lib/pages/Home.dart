@@ -7,15 +7,15 @@ import '../components/BottomNavBarComp.dart';
 class Home extends StatefulWidget {  // widget com estado mutavel
 
         const Home({ 
-                  super.key, // recebe e ja envia a key para o construtor
-                  String this.title = "default name",  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
-        });
+             super.key, // recebe e ja envia a key para o construtor
+             String this.title = "default name",  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
+        })
         final String title;
         // toda classe com propriedades final devem ter um construtor const !!
 
         @override
         State<Home> createState() {  
-                  return _HomeState();// retornando a classe estado com interface do estado
+             return _HomeState();// retornando a classe estado com interface do estado
         }
 }
 
