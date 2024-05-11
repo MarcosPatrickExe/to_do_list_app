@@ -6,7 +6,7 @@ import '../components/BottomNavBarComp.dart';
 // this screen will be replace by the Login view
 class Home extends StatefulWidget {  // widget com estado mutavel
 
-        const Home({ // parametros dentro de chaves sao opcionais, exceto aqueles com "required"
+        const Home({ 
                   super.key, // recebe e ja envia a key para o construtor
                   String this.title = "default name",  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
         });
