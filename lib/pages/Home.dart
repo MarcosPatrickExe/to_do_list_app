@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../components/BottomNavBarComp.dart';
-// necessarie imports
+
 
 
 // ESSA TELA FUTURAMENTE SERÁ SUBSTITUIDA PELA TELA DE LOGIN
