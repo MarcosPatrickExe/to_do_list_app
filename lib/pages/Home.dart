@@ -23,7 +23,7 @@ class Home extends StatefulWidget {  // widget com estado mutavel
 
 // componente que representa o estado da pagina  "MyHomePage"
 class _HomeState extends State<Home> {
-        int _counter = 0; // variavel pertecente a interface (build()) do State
+        int _counter = 0; 
         static dynamic _itemIndexSelect = 0;
         // a declaracao 'dynamic' define que a variavel tem um tipo dinamico, ou que pode ser de qualquer tipo
 
