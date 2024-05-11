@@ -4,7 +4,6 @@ import '../components/BottomNavBarComp.dart';
 
 
 // this screen will be replace by the Login view
-// componente que representa uma pagina com estado dinamico, o qual vai ser gerenciado pela classe "_MyHomePageState"
 class Home extends StatefulWidget {  // widget com estado mutavel
 
         const Home({ // parametros dentro de chaves sao opcionais, exceto aqueles com "required"
