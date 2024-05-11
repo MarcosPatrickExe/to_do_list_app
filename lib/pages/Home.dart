@@ -75,7 +75,6 @@ class _HomeState extends State<Home> {
                       ),
 
 
-                      // rodape
                       persistentFooterButtons: <Widget>[
                               Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
