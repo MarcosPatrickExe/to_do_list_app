@@ -90,7 +90,7 @@ class BottomNavBarComp extends StatelessWidget {
                                                 label: "My activities",
                                                 icon: Icon( Icons.task ),
                                         ),
-                                        // comentando 2 botoes, uma vez que deixam a BottomNavigationBar bastante comprimida
+                                        // comentando 2 botoes, uma vez que deixam a BottomNavigationBar bastante comprimida/apertada
                            /*           BottomNavigationBarItem(
                                                 label: "Signup",
                                                 icon: Icon( Icons.login ),
