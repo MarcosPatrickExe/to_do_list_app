@@ -12,7 +12,7 @@ class BottomNavBarComp extends StatelessWidget {
         
         // opcoes para mudar de pagina
         //  const BottomNavBarComp(
-        //            final Key? keyreceived,  // AQUI O 'keyreceived' eh obrigatorio, mas pode ser null, e eh enviado para o  super-construtor nomeado via ":super(key: keyreceived)"
+        //            final Key? keyreceived, 
         //            this.curentScreenIndex
         //  ): super(key: keyreceived );
 
