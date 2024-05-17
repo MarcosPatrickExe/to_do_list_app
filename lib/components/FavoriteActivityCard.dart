@@ -9,7 +9,7 @@ class FavoriteActivityCard extends StatelessWidget{
       final Activity _activityReceived;
       
       FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
-                                ido a variavel privada '_activityReceived'
+                              
 
       @override
       Widget build( BuildContext  favoriteActivitiesContext ){
