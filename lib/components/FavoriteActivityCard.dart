@@ -23,7 +23,7 @@ class FavoriteActivityCard extends StatelessWidget{
                         //   height: 20.0,    //old default
                            padding: EdgeInsets.all(10.0), // for all sides
                            child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly, // colocando espaco entre elementos
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
                                   children: [
                                           const Icon( Icons.star, size: 30, color: Colors.amber, ),
                                           SizedBox( width: 20.0, ),
