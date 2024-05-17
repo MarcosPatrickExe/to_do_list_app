@@ -28,7 +28,7 @@ class FavoriteActivityCard extends StatelessWidget{
                                           SizedBox( width: 20.0, ),
                                           Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start, //alinhamento vertical
-                                                children: [ // inserindo um mini card horizontal
+                                                children: [ // inserting a minimal card horizontally
                                                       Container(
                                                             width: 210,
                                                             child: Text( this._activityReceived.title, style: TextStyle( fontSize: 20.0, color: Colors.white), ),
