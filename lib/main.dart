@@ -11,7 +11,7 @@ void main() {
 
 class MyApp extends StatelessWidget { 
           const MyApp( { super.key } ); 
-
+ 
          // the method below is callback function that is called by framework in runtime
           @override
           Widget build ( BuildContext context ) { // todo metodo 'build' recebe um contexto da sua super-classe, no caso, a "StatelessWidget"
