@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
 /*
 // essa classe era usada dento da classe principal "MyApp". Foi criada por padrao ao criar o projeto Flutter
 class GiftApp extends StatelessWidget {
-
+ 
         @override
         Widget build(BuildContext context) { // funcao q constroi seu wiget
               return MaterialApp(
