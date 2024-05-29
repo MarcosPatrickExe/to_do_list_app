@@ -19,7 +19,7 @@ class Community extends StatelessWidget {
                   return Scaffold(
                             backgroundColor: const Color.fromARGB(255, 55, 3, 69),
                             appBar: AppBar( // appBar eh a barra do topo que aparece em todas as telas
-                                  title: const Text("Options"),
+                                  title: const Text("Options"), 
                                   centerTitle: true,
                                   toolbarHeight: 50.2,
                                   backgroundColor: Colors.deepPurple,
