@@ -4,7 +4,7 @@ import '../components/BottomNavBarComp.dart';
 
  
 // this screen will be replace by the Login view
-class Home extends StatefulWidget {  // widget com estado mutavel
+class Home extends StatefulWidget {  // widget com estado mutavel 
 
         const Home({ 
              super.key, // recebe e ja envia a key para o construtor
