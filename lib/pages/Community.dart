@@ -13,7 +13,7 @@ class Community extends StatelessWidget {
                backgroundColor: const Color.fromARGB(255, 128, 0, 177),
                textStyle: const TextStyle( fontSize: 20.0,  ),
           ); 
-
+ 
           @override     
           Widget build( BuildContext bc ){
                   return Scaffold(
