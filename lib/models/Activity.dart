@@ -1,6 +1,7 @@
 import 'Member.dart';
 // import basico do Memberrr
 
+
 // classe de modelo para o armazenamento das atividades que serao usadas na lista
 class Activity {
        String title;
