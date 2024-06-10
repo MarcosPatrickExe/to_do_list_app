@@ -4,7 +4,7 @@ import '../pages/Users.dart';
 import '../pages/Signup.dart';
 import '../pages/Home.dart';
 import '../pages/Community.dart';
-
+ 
  
 class BottomNavBarComp extends StatelessWidget {  
         const BottomNavBarComp( { super.key, required this.curentScreenIndex } ); 
