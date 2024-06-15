@@ -12,7 +12,7 @@ class Community extends StatelessWidget {
                maximumSize: const Size(200.0, 100.0),
                backgroundColor: const Color.fromARGB(255, 128, 0, 177),
                textStyle: const TextStyle( fontSize: 20.0,  ),
-          ); 
+          );
  
           @override     
           Widget build( BuildContext bc ){
