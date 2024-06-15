@@ -34,7 +34,7 @@ class Community extends StatelessWidget {
                                                       onPressed: () { },
                                                       child: const Text("Start game", style: TextStyle( color: Colors.white),  ),
                                               ),
-                                              ElevatedButton(
+                                              ElevatedButton( 
                                                       style: this.allBtnStyles,
                                                       onPressed: () {},
                                                       child: Text("Settings", style: TextStyle( color: Colors.white),  ),
