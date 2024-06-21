@@ -8,7 +8,7 @@ import '../models/Activity.dart';
 class FavoriteActivityCard extends StatelessWidget{
 
       final Activity _activityReceived; 
-      FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity;
+      FavoriteActivityCard({ required Activity favoriteActivity }): this._activityReceived = favoriteActivity; 
 
 
       @override
