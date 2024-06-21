@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:to_do_list/pages/FavoritesActivities.dart';
 import '../models/Activity.dart';
 
-  
+    
 
 class FavoriteActivityCard extends StatelessWidget{
 
