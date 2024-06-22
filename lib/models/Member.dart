@@ -1,5 +1,5 @@
   
-class Member {
+class Member { 
    String login;    
    String avatarUrl; // link in HTTP format  
  
