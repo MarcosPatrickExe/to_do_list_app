@@ -15,4 +15,4 @@ class Activity {
        Activity(this.title, this.description, this.dateRelease, this.reminderDate, this.owner, this.isFavorite);
        // construtor basico sem argumentos nomeados e posicionais
 }
-
+ 
