@@ -14,7 +14,7 @@ class FavoriteActivities extends StatefulWidget {
 
         @override
         State<FavoriteActivities> createState() => FavoriteActivitiesState( );
-}
+} 
 
 
 
