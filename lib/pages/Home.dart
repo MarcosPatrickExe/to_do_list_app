@@ -10,7 +10,7 @@ class Home extends StatefulWidget {  // widget com estado mutavel
              super.key, // recebe e ja envia a key para o construtor
              String this.title = "default name",  // recebe e ja atribui o valor do parametro para a propriedade interna "title". "this.title" pode ter o "String" na frente, mas ele eh detectado por inferencia
         })
-        final String title;
+        final String title; 
         // toda classe com propriedades final devem ter um construtor const !!
 
         @override
