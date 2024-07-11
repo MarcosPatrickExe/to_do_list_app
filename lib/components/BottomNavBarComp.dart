@@ -3,7 +3,7 @@ import 'package:to_do_list/pages/ActivityList.dart';
 import '../pages/Users.dart';
 import '../pages/Signup.dart';
 import '../pages/Home.dart';
-import '../pages/Community.dart'; 
+import '../pages/Community.dart';  
 
  
 class BottomNavBarComp extends StatelessWidget {   
