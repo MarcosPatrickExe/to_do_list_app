@@ -30,7 +30,7 @@ class BottomNavBarComp extends StatelessWidget {
                 print('current screen is:  $index'  );
                 // print para teste
 
-               
+                
                 void  _onTapItem( int index ){
                           switch( index ){
                                 case 0:
