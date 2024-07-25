@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/Activity.dart';
 import '../pages/FavoritesActivities.dart';
 
-                       
+                        
 class ActivityList extends StatefulWidget {
   
             // inserting a manual data for model of list view
