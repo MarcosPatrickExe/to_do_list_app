@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../models/Activity.dart';
 import '../pages/FavoritesActivities.dart';
- 
+  
                         
 class ActivityList extends StatefulWidget {
   
