@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           @override
           Widget build ( BuildContext context ) { // todo metodo 'build' recebe um contexto da sua super-classe, no caso, a "StatelessWidget"
                return MaterialApp(
-                   title: 'Activity Schedule app',  
+                   title: 'Activity Schedule app',   
                    theme: ThemeData(  // campos podem nulos
                        primarySwatch: null ,//Colors.orange, nullable // -> cor anterior 
                        secondaryHeaderColor:  null, //Colors.black
