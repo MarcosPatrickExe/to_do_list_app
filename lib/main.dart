@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
                    title: 'Activity Schedule app',   
                    theme: ThemeData(  // campos podem nulos
                        primarySwatch: null ,//Colors.orange, nullable // -> cor anterior 
-                       secondaryHeaderColor:  null, //Colors.black
+                       secondaryHeaderColor:  null, //Colors.black 
                   ),
                   home: const Home( title: "Incrementador"),
               );
