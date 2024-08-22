@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 /* class Elements {
        Elements( {this.body, this.footerBottoms } );
        Widget?  body = null;
-       List<Widget>?  footerBottoms = null;
+       List<Widget>?  footerBottoms = null; 
 }
 */
  
