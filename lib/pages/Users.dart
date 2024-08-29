@@ -1,4 +1,4 @@
- import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../components/BottomNavBarComp.dart';
 import '../models/Member.dart'; // Member aqui atua como uma interface no TS
