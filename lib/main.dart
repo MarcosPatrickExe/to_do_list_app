@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'pages/Signup.dart';       
 import 'pages/ActivityList.dart';          
 import 'pages/Home.dart';        
@@ -8,7 +8,7 @@ import 'pages/Home.dart';
 void main() {               
      runApp( const MyApp() );      
 }     
-  
+   
 class MyApp extends StatelessWidget {  
           const MyApp( { super.key } );   
    
