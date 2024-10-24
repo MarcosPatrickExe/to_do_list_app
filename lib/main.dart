@@ -1,4 +1,4 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'pages/Signup.dart';          
 import 'pages/ActivityList.dart';             
 import 'pages/Home.dart';           
