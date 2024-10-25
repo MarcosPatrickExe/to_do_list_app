@@ -8,7 +8,7 @@ class ActivityList extends StatefulWidget {
   
             // inserting a manual data for model of list view
             var listActivities = <Activity>[
-                  Activity(
+                  Activity( 
                             "Comprar a ração dos gatos",
                             "Não posso esquecer de maneira alguma de comprar o alimento dos meus filhos....",
                             DateTime(2023, 04, 10),
