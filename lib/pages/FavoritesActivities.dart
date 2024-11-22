@@ -29,7 +29,7 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
       }
 
 
-      @override
+      @override 
       Widget build( BuildContext bc ){
 
                return Scaffold(
