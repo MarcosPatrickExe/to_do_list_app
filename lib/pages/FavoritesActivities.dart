@@ -16,7 +16,7 @@ class FavoriteActivities extends StatefulWidget {
         State<FavoriteActivities> createState() => FavoriteActivitiesState( );
 } 
 
-
+ 
 
 // classe para inserir o state-full widget
 class FavoriteActivitiesState extends State<FavoriteActivities>{
