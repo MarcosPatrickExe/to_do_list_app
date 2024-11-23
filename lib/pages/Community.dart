@@ -6,7 +6,7 @@ import '../components/BottomNavBarComp.dart';
 class Community extends StatelessWidget {    
           Community( {super.key} ); 
  
-          // estilo-modelo para os ElevatedButtons 
+          // estilo-modelo para os ElevatedButtons  
           final ButtonStyle allBtnStyles =  ElevatedButton.styleFrom(
                minimumSize: const Size(100.0, 50.0), 
                maximumSize: const Size(200.0, 100.0),
