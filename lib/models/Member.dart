@@ -5,4 +5,4 @@ class Member {
   
    Member( this.login, this.avatarUrl );  
 }   
- 
+  
