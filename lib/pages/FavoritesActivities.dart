@@ -28,7 +28,7 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
             });
       }
 
-
+ 
       @override 
       Widget build( BuildContext bc ){
 
