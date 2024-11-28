@@ -27,7 +27,7 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
                      super.widget.changeList( super.widget.activitiesList ) ;
             });
       }
-
+ 
  
       @override  
       Widget build( BuildContext bc ){ 
