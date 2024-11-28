@@ -31,7 +31,7 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
  
       @override  
       Widget build( BuildContext bc ){ 
-
+ 
                return Scaffold(
                           backgroundColor: const Color.fromARGB(255, 55, 3, 69),
                           appBar: AppBar(
