@@ -15,7 +15,7 @@ class FavoriteActivities extends StatefulWidget {
         @override
         State<FavoriteActivities> createState() => FavoriteActivitiesState( );
 } 
- 
+  
  
 
 // classe para inserir o state-full widget
