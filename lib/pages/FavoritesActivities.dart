@@ -25,7 +25,7 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
             super.setState(() {
                      super.widget.activitiesList.remove( atividade);
                      super.widget.changeList( super.widget.activitiesList ) ;
-            });
+            }); 
       }
  
  
