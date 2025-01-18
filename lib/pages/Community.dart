@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/BottomNavBarComp.dart';
+import '../components/BottomNavBarComp.dart'; 
    
     
 // this page will changed because it just provida a basic Dart code examples
