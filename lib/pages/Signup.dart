@@ -1,7 +1,7 @@
  import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../components/BottomNavBarComp.dart';
-
+ 
  
 class Fields {  // equivalente a uma interface
         final String? labelText; // usando o 'final' para todos os outros atributos
