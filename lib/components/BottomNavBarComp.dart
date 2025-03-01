@@ -6,7 +6,7 @@ import '../pages/Home.dart';
 import '../pages/Community.dart';   
 
  
-class BottomNavBarComp extends StatelessWidget {   
+class BottomNavBarComp extends StatelessWidget {    
         const BottomNavBarComp( { super.key, required this.curentScreenIndex } ); 
         
         // opcoes para mudar de pagina
