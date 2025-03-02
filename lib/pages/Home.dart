@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
 
         //  static final List<IScenes> pages = [MyHomePage(title: 'Incrementor',), LoremIpsum(), Options() ];
 
-        void incrementCounter() {
+        void incrementCounter() { 
               super.setState(() { // passando funcao lambda/callback para o setState
                       this._counter++; // aqui o 'this' nao eh necessario
                       //OU:   setState(  () =>  this._counter++  );
