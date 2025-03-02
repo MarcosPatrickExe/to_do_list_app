@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'; 
-import '../components/BottomNavBarComp.dart'; 
+import '../components/BottomNavBarComp.dart';  
      
           
 // this screen will be replace by the Login view
