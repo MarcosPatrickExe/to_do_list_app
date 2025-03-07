@@ -6,4 +6,4 @@ class Member {
    Member( this.login, this.avatarUrl );    // member of class
 }   
   
- 
+  
