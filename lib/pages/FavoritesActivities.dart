@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart'; 
 import 'package:flutter/material.dart'; 
-import '../models/Activity.dart';    
+import '../models/Activity.dart';     
 import '../components/FavoriteActivityCard.dart';   
       
      
