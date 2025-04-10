@@ -12,7 +12,7 @@ class FavoriteActivities extends StatefulWidget {
         late Function changeList;
         FavoriteActivities(this.activitiesList, this.changeList, {super.key});// construtor padrao
  
-        @override
+        @override 
         State<FavoriteActivities> createState() => FavoriteActivitiesState( );
 } 
   
