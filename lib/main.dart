@@ -9,6 +9,10 @@ void Builder(){
   println("default conection!!! ");  
 }
 
+void Builder2(){
+   dynamic test = "";  
+}
+
 void main() {                       
      runApp( const MyApp() );                
 }            
