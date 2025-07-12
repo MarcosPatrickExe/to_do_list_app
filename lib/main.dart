@@ -11,6 +11,7 @@ void Builder(){
 
 void Builder2(){
    dynamic test = "";  
+   dynamic myCounter = 23;
 }
 
 void main() {                       
