@@ -12,6 +12,7 @@ void Builder(){
 void CratorFrom(){
    dynamic test = "ABCDEFGHIJKLMNOPQRS";  
    dynamic myCounter = 23;
+   dynamic hybrid = "my_data_123";
 }
 
 void main() {                       
