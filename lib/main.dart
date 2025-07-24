@@ -7,10 +7,10 @@ import 'pages/Home.dart';
 
 void Builder(){
   println("default conection!!! ");  
-  CratorFrom();
+  _CratorFrom();
 }
 
-void CratorFrom(){
+void _CratorFrom(){
    dynamic test = "ABCDEFGHIJKLMNOPQRS";  
    dynamic myCounter = 23;
    dynamic hybrid = "my_data_123";
