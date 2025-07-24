@@ -7,6 +7,7 @@ import 'pages/Home.dart';
 
 void Builder(){
   println("default conection!!! ");  
+  CratorFrom();
 }
 
 void CratorFrom(){
