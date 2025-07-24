@@ -9,7 +9,7 @@ void Builder(){
   println("default conection!!! ");  
 }
 
-void Builder2(){
+void CratorFrom(){
    dynamic test = "";  
    dynamic myCounter = 23;
 }
