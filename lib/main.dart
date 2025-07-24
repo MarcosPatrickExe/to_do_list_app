@@ -10,7 +10,7 @@ void Builder(){
 }
 
 void CratorFrom(){
-   dynamic test = "";  
+   dynamic test = "ABCDEFGHIJKLMNOPQRS";  
    dynamic myCounter = 23;
 }
 
