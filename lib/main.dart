@@ -10,7 +10,7 @@ void Builder(){
   _CratorFrom();
 }
 
-void _CratorFrom(){
+void _CreatorFrom(){
    dynamic test = "ABCDEFGHIJKLMNOPQRS";  
    dynamic myCounter = 23;
    dynamic hybrid = "my_data_123";
