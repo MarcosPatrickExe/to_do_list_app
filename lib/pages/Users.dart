@@ -26,6 +26,7 @@ class UsersState extends State<Users>{
         void initState(){
                   super.initState();
                   this._loadData();
+                // this.self();
         }
 
         // custom function
