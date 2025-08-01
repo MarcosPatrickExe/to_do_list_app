@@ -4,7 +4,7 @@ import '../components/BottomNavBarComp.dart';
 import '../models/Member.dart'; // Member aqui atua como uma interface no TS
 import 'package:http/http.dart' as http;//converter/mapear  json em  objeto
 import 'dart:convert';
- 
+
 
 // Aqui é feita uma requisição para uma API do github para recuperar alguns membros e assim montar a interface
 class Users extends StatefulWidget{
@@ -86,7 +86,8 @@ class UsersState extends State<Users>{
                                     decoration: const  BoxDecoration(
                                             color:  Color.fromARGB(80, 26, 0, 51), //metodo estatico 'fromARGB'
                                             borderRadius: BorderRadius.all( Radius.circular(10.0) )
-                                    ),
+                                            // color: yellow,
+                                    ), 
                                     constraints:  BoxConstraints(
                                             minWidth: 110.0,
                                             minHeight: 210.0,
