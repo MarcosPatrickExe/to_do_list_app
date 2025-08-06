@@ -6,7 +6,7 @@ import 'pages/Home.dart';
                              
 
 void Builder(){
-   println("test connection ! ");  
+   println("test connection! ");  
    println("default conection!!! ");  
   _CratorFrom();
 }
