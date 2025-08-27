@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart'; 
 import 'pages/Signup.dart';                                 
-import 'pages/ActivityList.dart';                                            
+import 'pages/ActivityList.dart';                                             
 import 'pages/Home.dart';                   
-// export 'pages/Home.dart'; // trying export classes //página de exempl
+// export 'pages/Home.dart'; // trying export classes //página de exemple
                              
 
 void Builder(){
