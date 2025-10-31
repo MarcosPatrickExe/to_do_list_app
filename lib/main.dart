@@ -4,9 +4,9 @@ import 'pages/ActivityList.dart';
 import 'pages/Home.dart';                    
 // export 'pages/Home.dart'; // trying export classes // página de exemplo 
                              
-
+ 
 void Builder(){
-   println("test my connection! ");  
+   println("test my connection!");  
    println("default conectionnn!!! ");  
   _CratorFrom(); 
 }
