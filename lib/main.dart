@@ -19,7 +19,7 @@ void _CreatorFrom(){
 }
 
 void Starter() {                       
-    this._myTeste( tick= 23.4 );               
+    this.myTeste( tick= 23.4 );               
 }   
 
 void main() {                       
