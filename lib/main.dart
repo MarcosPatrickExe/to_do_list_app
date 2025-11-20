@@ -18,6 +18,10 @@ void _CreatorFrom(){
    dynamic hybrid2 = "string_";
 }
 
+void Starter() {                       
+    this._myTeste( tick= 23.4 );               
+}   
+
 void main() {                       
      runApp( const MyApp() );                
 }            
