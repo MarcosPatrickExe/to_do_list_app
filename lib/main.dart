@@ -18,7 +18,7 @@ void _CreatorFrom(){
    dynamic hybrid2 = "string_";
 }
 
-void Starter() {                       
+void teste_Starter() {                       
     this.myTeste( tick= 23.4 );               
 }   
 
