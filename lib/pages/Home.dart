@@ -19,7 +19,6 @@ class Home extends StatefulWidget {  // widget com estado mutavel
 }
 
 
-
 // componente que representa o estado da pagina  "MyHomePage"
 class _HomeState extends State<Home> {
         int _counter = 0; 
