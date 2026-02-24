@@ -14,7 +14,7 @@ void _CreatorFrom(){
    dynamic test = "ABCDEFGHIJKLMNOPQRS";  
    dynamic myCounter = 0;
    dynamic hybrid = "hybridData";
-   dynamic hybrid2 = "string ";
+   dynamic hybrid2 = "string";
 }
 
 void teste_Starter() {                       
