@@ -10,13 +10,12 @@ class FavoriteActivities extends StatefulWidget {
         late List<Activity> activitiesList;
         late Function changeList;
         FavoriteActivities(this.activitiesList, this.changeList, {super.key});// construtor padrao
- 
+        
         @override 
         State<FavoriteActivities> createState() => FavoriteActivitiesState( );
 } 
   
   
-
 // classe para inserir o state-full widget
 class FavoriteActivitiesState extends State<FavoriteActivities>{
 
