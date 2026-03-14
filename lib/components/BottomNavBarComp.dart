@@ -21,7 +21,6 @@ class BottomNavBarComp extends StatelessWidget {
         //
         final int curentScreenIndex;
 
-
         @override
         Widget build( BuildContext buildContext){
 
