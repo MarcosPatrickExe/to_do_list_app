@@ -2,7 +2,7 @@ import 'Member.dart';
        
 // classe de modelo para o armazenamento das atividades que serao usadas na lista  
 class Activity { 
-       String title;  
+       String title;   
        String? description; // dado opcional, podendo receber valor nulo
        DateTime? dateRelease; // dado-horario opcional, podendo receber valor nulo/opcional. Referente ao valor de criaçao do lembrete
        DateTime reminderDate; // data-horario de lembrete. Esse ja nao eh opcional, eh obrigatorio
