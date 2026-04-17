@@ -3,13 +3,18 @@ import 'pages/Signup.dart';
 import 'pages/ActivityList.dart';                                             
 import 'pages/Home.dart';   
 
-
 void Builder(){   
     println(" test my connection! ");  
     println("default conectionnn!!");
     println("my third connection simulation!  ");
     _CratorFrom();  
 }
+
+/*
+void CreatedComponent(){
+    print("new String() de teste");
+}
+*/
 
 void _CreatorFrom(){
    dynamic test = "ABCDEFGHIJKLMNOSdPQRS";  
