@@ -14,6 +14,7 @@ class Fields {  // equivalente a uma interface
 }
 
 
+
 // essa tela somente será acessada na tela de login como uma opção onde o usuário poderá clicar para se cadastrar
 class Signup extends StatelessWidget {
         const Signup( {super.key} );
