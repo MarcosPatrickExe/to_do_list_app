@@ -7,7 +7,7 @@ class Fields {  // equivalente a uma interface
         final String? labelText; // usando o 'final' para todos os outros atributos
         final String? hintText;
         final Icon? iconnn; // Icon? iconn
-        final TextInputType? inputType; 
+        final TextInputType? inputType;
         // todos os campos 'final' inicialmente podem ser nulos, por isso o '?'
 
         const Fields( this.labelText, this.hintText, this.iconnn, this.inputType );
