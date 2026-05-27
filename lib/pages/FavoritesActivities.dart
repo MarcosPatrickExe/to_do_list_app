@@ -7,7 +7,7 @@ import '../components/FavoriteActivityCard.dart';
 class FavoriteActivities extends StatefulWidget {
 
   // propriedades que serao inicializadas mais tarde na clsse 'FavoriteActivityState'
-        late List<Activity> activitiesList;
+  late List<Activity> activitiesList;
         late Function changeList;
         FavoriteActivities(this.activitiesList, this.changeList, {super.key});// construtor padrao
         
