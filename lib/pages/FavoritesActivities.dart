@@ -62,11 +62,11 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
                                                         itemCount: super.widget.activitiesList.length,
                                                         itemBuilder: (BuildContext bcontxt, int index){
 
-                                                              if ( super.widget.activitiesList[index].isFavorite ) {
+                                                          if ( super.widget.activitiesList[index].isFavorite ) {
                                                                       return FavoriteActivityCard(
                                                                                  favoriteActivity:  super.widget.activitiesList[index]
                                                                       );
-                                                              }
+                                                          }
                                                               return  SizedBox(); // deve-se retornar qualquer classe
                                                             // desde que nao seja null, pois assim o itemBuilder vai parar de
                                                             // executar o callback e o resto dos Cards nao serao renderizados!
