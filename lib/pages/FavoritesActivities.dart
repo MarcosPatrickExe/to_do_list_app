@@ -34,7 +34,7 @@ class FavoriteActivitiesState extends State<FavoriteActivities>{
                           backgroundColor: const Color.fromARGB(255, 55, 3, 69),
                           appBar: AppBar(
                                     backgroundColor: Colors.deepPurple,
-                                    title: Row (
+                                    title: Row ( 
                                           mainAxisAlignment:  MainAxisAlignment.center,
                                           children: const <Widget>[
                                                  Text("My favorite activities"),
