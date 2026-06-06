@@ -10,7 +10,6 @@ void Builder(){
     _CratorFrom();  
 }
 
-
 /*
 void CreatedComponent(){
     print("new String() de teste");
