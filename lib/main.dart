@@ -3,7 +3,6 @@ import 'pages/Signup.dart';
 import 'pages/ActivityList.dart';                                             
 import 'pages/Home.dart';   
 
-
 void Builder(){   
     println("default conectionnn!!");
     println("my third connection simulation!  ");
